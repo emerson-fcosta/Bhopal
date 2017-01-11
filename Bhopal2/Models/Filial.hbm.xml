@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Bhopal2"
+                   namespace="Bhopal2.Models" >
+
+  <class name="Filial">
+
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Nome" length="50" />
+    <property name="Ddd" length="2" />
+    <property name="Codigo" length="50" />
+
+    <bag name="Departamentos" lazy="true" cascade="all" >
+      <key column="FilialId" />
+      <one-to-many class="Departamento" />
+    </bag>
+
+  </class>
+</hibernate-mapping>

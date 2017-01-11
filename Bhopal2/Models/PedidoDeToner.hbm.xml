@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Bhopal2"
+                   namespace="Bhopal2.Models" >
+
+  <class name="PedidoDeToner">
+
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+
+    <property name="NumeroChamado" length="50" />
+    <property name="DataEnvio" />
+    <property name="DataRecebimento"/>
+    <property name="Status" length="50" />
+    
+       
+
+    <many-to-one name="Impressora" column="ImpressoraId" cascade="none" />
+    <many-to-one name="Marca" column="MarcaId" cascade="none" />
+    <many-to-one name="Toner" column="TonerId" cascade="none" />
+    <many-to-one name="Departamento" column="DepartamentoId" cascade="none" />
+    <many-to-one name="Filial" column="FilialId" cascade="none" />
+
+    
+
+  </class>
+</hibernate-mapping>

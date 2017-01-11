@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Bhopal2"
+                   namespace="Bhopal2.Models" >
+
+  <class name="Fornecedor">
+
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Nome" length="50" />
+
+
+    <bag name="Contatos" lazy="true" cascade="all" >
+      <key column="FornecedorId" />
+      <one-to-many class="Contato" />
+    </bag>
+
+    <bag name="Impressoras" lazy="true" cascade="none" >
+      <key column="FornecedorId" />
+      <one-to-many class="Impressora" />
+    </bag>
+
+
+  </class>
+</hibernate-mapping>

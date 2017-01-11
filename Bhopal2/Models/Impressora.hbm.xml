@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Bhopal2"
+                   namespace="Bhopal2.Models" >
+
+  <class name="Impressora">
+
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Tipo" length="50" />
+    <property name="Codigo" length="10" />
+
+    <many-to-one name="Fornecedor" column="FornecedorId" cascade="none" />
+    <many-to-one name="Departamento" column="DepartamentoId" cascade="none" />
+    <many-to-one name="Modelo" column="ModeloId" cascade="none" />
+    <many-to-one name="Marca" column="MarcaId" cascade="none" />
+
+    <bag name="PedidosDeToner" lazy="true" cascade="all" >
+      <key column="ImpressoraId" />
+      <one-to-many class="PedidoDeToner" />
+    </bag>
+
+    
+  </class>
+</hibernate-mapping>

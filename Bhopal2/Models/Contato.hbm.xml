@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Bhopal2"
+                   namespace="Bhopal2.Models" >
+
+  <class name="Contato">
+
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Nome" length="50" />
+    <property name="Telefone" length="20" />
+
+    <many-to-one name="Fornecedor" column="FornecedorId" cascade="none" />
+
+  </class>
+</hibernate-mapping>
