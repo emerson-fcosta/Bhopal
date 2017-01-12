@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Cadastro de Toner</title>
     <!-- Bootstrap -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Impressora</label>
-            <asp:DropDownList ID="DropDownList1" class="form-control" runat="server" AutoPostBack="True">
+            <asp:DropDownList ID="DropDownList1" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
         <div class="form-group">
