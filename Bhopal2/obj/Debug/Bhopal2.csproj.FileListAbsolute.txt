@@ -39,3 +39,44 @@ C:\Developer\Source\bhopal\Bhopal2\bin\System.Data.SQLite.xml
 C:\Developer\Source\bhopal\Bhopal2\obj\Debug\Bhopal2.csprojResolveAssemblyReference.cache
 C:\Developer\Source\bhopal\Bhopal2\obj\Debug\Bhopal2.dll
 C:\Developer\Source\bhopal\Bhopal2\obj\Debug\Bhopal2.pdb
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\ApplicationInsights.config
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\csc.exe
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\vbc.exe
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\VBCSCompiler.exe
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Models\Marca.hbm.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Models\PedidoDeToner.hbm.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Bhopal2.dll.config
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Bhopal2.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Bhopal2.pdb
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Iesi.Collections.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.Web.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.ApplicationInsights.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\NHibernate.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\System.Data.SQLite.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Iesi.Collections.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.Web.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.ApplicationInsights.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\NHibernate.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\bin\System.Data.SQLite.xml
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\obj\Debug\Bhopal2.csprojResolveAssemblyReference.cache
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\obj\Debug\Bhopal2.dll
+C:\Users\emerson.costa\Documents\Visual Studio 2015\Projects\Bhopal-master\Bhopal2\obj\Debug\Bhopal2.pdb

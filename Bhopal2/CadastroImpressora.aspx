@@ -44,6 +44,12 @@
             <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>  Salvar
+                </button>
+            </div>
     </form>
 </body>
 </html>

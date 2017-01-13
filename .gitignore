@@ -1,0 +1,5 @@
+/.vs
+/Bhopal2/bin
+/Bhopal2/obj
+/Bhopal2/App_Data/*.db
+/packages
