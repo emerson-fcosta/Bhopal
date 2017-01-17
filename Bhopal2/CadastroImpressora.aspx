@@ -23,11 +23,11 @@
     <form id="form1" runat="server">
         <div class="form-group">
             <label for="exampleInputEmail1">Tipo</label>
-            <asp:TextBox ID="txtModeloNome" class="form-control" placeholder="Digite tipo de impressora" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtModeloNome" class="form-control" placeholder="Digite tipo de impressora" runat="server" OnTextChanged="txtModeloNome_TextChanged"></asp:TextBox>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Codigo</label>
-            <asp:TextBox ID="TextBox1" class="form-control" placeholder="Digite codigo da impressora" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtCodigoImpressora" class="form-control" placeholder="Digite codigo da impressora" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Fornecedor</label>
@@ -44,6 +44,8 @@
             <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
+           <asp:Button ID="Button1" runat="server" class="btn btn-primary" OnClick="Button1_Click" Text="Salvar" />
+        
     </form>
 </body>
 </html>
