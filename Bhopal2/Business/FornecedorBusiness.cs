@@ -20,5 +20,11 @@ namespace Bhopal2.Business
 
             return lista;
         }
+
+        public Fornecedor retornaId(long id)
+        {
+            var session = NHibernateHelper.GetSession();
+            return session.Get<Fornecedor>(id);
+        }
     }
 }

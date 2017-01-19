@@ -30,7 +30,7 @@
             <asp:DropDownList ID="ddlImpressoras" class="form-control" runat="server"></asp:DropDownList>
         </div>
         
-        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Width="127px" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Width="127px" OnClick="btnSalvar_Click" />
     </form>
 </body>
 </html>

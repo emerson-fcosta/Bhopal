@@ -25,5 +25,11 @@ namespace Bhopal2.Business
 
             session.Close();
         }
+
+        public Toner retornaId (long id)
+        {
+            var session = NHibernateHelper.GetSession();
+            return session.Get<Toner>(id);
+        }
     }
 }

@@ -30,11 +30,6 @@
             <asp:TextBox ID="TextBox2" type="text" class="form-control" placeholder="Digite o codigo" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Impressora</label>
-            <asp:DropDownList ID="DropDownList1" class="form-control" runat="server">
-            </asp:DropDownList>
-        </div>
-        <div class="form-group">
             <asp:CheckBox ID="CheckBox1"  runat="server" Text=" Colorido ?" />
         </div>
         <asp:Button ID="Button1" runat="server" class="btn btn-default" OnClick="Button1_Click" Text="Salvar" />

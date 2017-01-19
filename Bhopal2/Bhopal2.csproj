@@ -179,8 +179,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\DepartamentoBusiness.cs" />
     <Compile Include="Business\FornecedorBusiness.cs" />
     <Compile Include="Business\ImpressoraBusiness.cs" />
+    <Compile Include="Business\MarcaBusiness.cs" />
+    <Compile Include="Business\ModeloBusiness.cs" />
     <Compile Include="Business\PedidoDeTonerBusiness.cs" />
     <Compile Include="Business\TonerBusiness.cs" />
     <Compile Include="CadastroImpressora.aspx.cs">

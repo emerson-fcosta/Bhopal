@@ -14,9 +14,9 @@
     <property name="Colorido" />
     
     <bag name="Impressoras" lazy="true" cascade="none">
-      <key column="TonerId" />
-      <one-to-many class="Impressora" />
-     </bag>
+      <key column="ImpressoraId"/>
+      <one-to-many class="Toner"/>
+      </bag>
 
   </class>
 </hibernate-mapping>

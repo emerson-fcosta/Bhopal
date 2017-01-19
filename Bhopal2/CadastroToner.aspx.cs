@@ -17,13 +17,13 @@ namespace Bhopal2
         {
             if (!Page.IsPostBack)
             {
-                ImpressoraBusiness i = new ImpressoraBusiness();
+               /* ImpressoraBusiness i = new ImpressoraBusiness();
                 var IMPRESSORAS = i.retornaImpressoras();
 
                 DropDownList1.DataTextField = "Nome";
                 DropDownList1.DataValueField = "Id";
                 DropDownList1.DataSource = IMPRESSORAS;
-                DropDownList1.DataBind();
+                DropDownList1.DataBind(); */
             }
         }
 
@@ -38,10 +38,10 @@ namespace Bhopal2
             t.Cor = TextBox1.Text.ToString();
             t.Codigo = TextBox2.Text.ToString();
             t.Colorido = CheckBox1.Checked;
-            t.Impressoras = new List<Impressora>() {
+            /*t.Impressoras = new List<Impressora>() {
                 new ImpressoraBusiness().GetByID(long.Parse(DropDownList1.SelectedValue))
-            };
-            //i.Id = 
+            };*/
+             
 
             var gravaToner = new TonerDAO();
             gravaToner.AdicionaToner(t);
