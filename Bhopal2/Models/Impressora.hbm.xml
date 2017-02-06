@@ -5,23 +5,45 @@
 
   <class name="Impressora">
 
-    <id name="Id">
+    <id name="Id" type="long">
       <generator class="identity"/>
     </id>
 
     <property name="Tipo" length="50" />
     <property name="Codigo" length="10" />
 
-    <many-to-one name="Fornecedor" column="FornecedorId" cascade="none" />
-    <many-to-one name="Departamento" column="DepartamentoId" cascade="none" />
-    <many-to-one name="Modelo" column="ModeloId" cascade="none" />
-    <many-to-one name="Marca" column="MarcaId" cascade="none" />
+    
+    
 
     <bag name="PedidosDeToner" lazy="true" cascade="all" >
       <key column="ImpressoraId" />
       <one-to-many class="PedidoDeToner" />
     </bag>
+    
+    <bag name="Fornecedores" lazy="true" cascade="none">
+      <key column="FornecedorId"/>
+      <one-to-many class="Impressora" />
+        </bag>
 
+    <bag name="Departamentos" lazy="true" cascade="none">
+      <key column="DepartamentoId"/>
+      <one-to-many class="Impressora" />
+    </bag>
+
+    <bag name="Modelos" lazy="true" cascade="none">
+      <key column="ModeloId"/>
+      <one-to-many class="Impressora" />
+    </bag>
+
+    <bag name="Marcas" lazy="true" cascade="none">
+      <key column="MarcaId"/>
+      <one-to-many class="Impressora" />
+    </bag>
+    
+    <bag name="Toneres" lazy="true" cascade="none">
+      <key column="TonerId"/>
+      <one-to-many class="Impressora"/>
+        </bag>
     
   </class>
 </hibernate-mapping>

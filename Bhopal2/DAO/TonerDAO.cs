@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Bhopal2.Infra;
 using Bhopal2.Models;
+using NHibernate;
 
 namespace Bhopal2.DAO
 {
@@ -43,6 +44,14 @@ namespace Bhopal2.DAO
             session.Transaction.Commit();
 
             session.Close(); 
+        }
+
+        public IList<Toner> getAll()
+        {
+            var session = NHibernateHelper.GetSession();
+            IQuery buscaToneres = session.CreateQuery($"from Toner t");
+            var list = (List<Toner>)buscaToneres.List<Toner>();
+            return list;
         }
     }
 }

@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastroModelo.aspx.cs" Inherits="Bhopal2.scripts.CadastroModelo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Bhopal2.Default1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Cadastro de Modelo de Toner</title>
+    <title></title>
     <!-- Bootstrap -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,16 +21,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Modelo</label>
-            <asp:TextBox ID="txtModeloNome" class="form-control" placeholder="Digite modelo do toner" runat="server"></asp:TextBox>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Impressora</label>
-            <asp:DropDownList ID="ddlImpressoras" class="form-control" runat="server"></asp:DropDownList>
-        </div>
-        
-        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Width="127px" OnClick="btnSalvar_Click" />
+    <div>
+    
+    </div>
     </form>
 </body>
 </html>

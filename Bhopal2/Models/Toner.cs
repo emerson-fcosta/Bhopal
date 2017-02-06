@@ -12,7 +12,7 @@ namespace Bhopal2.Models
         public virtual string Cor { get; set; }
         public virtual string Codigo { get; set; }
 
-        public virtual IList<Impressora> Impressoras { get; set; }
+       public virtual IList<Impressora> Impressoras { get; set; }
 
         public virtual bool Colorido { get; set; }
     }

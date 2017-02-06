@@ -48,8 +48,8 @@ namespace Bhopal2.DAO
         {
             var session = NHibernateHelper.GetSession();
 
-            IQuery buscaImpressoras = session.CreateQuery($"from Modelo f");
-            var list = (List<Modelo>)buscaImpressoras.List<Modelo>();
+            IQuery buscaModelos = session.CreateQuery($"from Modelo mod");
+            var list = (List<Modelo>)buscaModelos.List<Modelo>();
             return list;
         }
     }

@@ -23,15 +23,21 @@
     <form id="form1" runat="server">
         <div class="form-group">
             <label for="exampleInputEmail1">Tipo</label>
-            <asp:TextBox ID="txtModeloNome" class="form-control" placeholder="Digite tipo de impressora" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtTipo" class="form-control" placeholder="Digite tipo de impressora" runat="server" OnTextChanged="txtModeloNome_TextChanged"></asp:TextBox>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Codigo</label>
-            <asp:TextBox ID="TextBox1" class="form-control" placeholder="Digite codigo da impressora" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtCodigoImpressora" class="form-control" placeholder="Digite codigo da impressora" runat="server" OnTextChanged="txtCodigoImpressora_TextChanged"></asp:TextBox>
         </div>
         <div class="form-group">
+          <label for="exempleInputEmail1">Marca</label> 
+            <asp:DropDownList ID="ddlMarca" class="form-control" runat="server" OnSelectedIndexChanged="ddlMarca_SelectedIndexChanged" ToolTip="Selecione a marca">
+                </asp:DropDownList>   
+        </div>
+
+        <div class="form-group">
             <label for="exampleInputEmail1">Fornecedor</label>
-            <asp:DropDownList ID="ddlFornecedor" class="form-control" runat="server">
+            <asp:DropDownList ID="ddlFornecedor" class="form-control"  runat="server" OnSelectedIndexChanged="ddlFornecedor_SelectedIndexChanged" ToolTip="Selecione o fornecedor" >
             </asp:DropDownList>
         </div>
         <div class="form-group">
@@ -44,12 +50,6 @@
             <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
-
-        <div class="form-group">
-            <button type="button" class="btn btn-primary btn-sm">
-            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>  Salvar
-                </button>
-            </div>
     </form>
 </body>
 </html>

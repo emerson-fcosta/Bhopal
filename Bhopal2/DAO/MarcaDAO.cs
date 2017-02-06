@@ -1,5 +1,6 @@
 ﻿using Bhopal2.Infra;
 using Bhopal2.Models;
+using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,15 @@ namespace Bhopal2.DAO
             session.Transaction.Commit();
 
             session.Close();
+        }
+
+        public IList<Marca> getAll()
+        {
+            var session = NHibernateHelper.GetSession();
+
+            IQuery buscaMarcas = session.CreateQuery($"from Marca m");
+            var list = (List<Marca>)buscaMarcas.List<Marca>();
+            return list;
         }
     }
 }

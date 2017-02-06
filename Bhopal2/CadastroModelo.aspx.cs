@@ -28,5 +28,10 @@ namespace Bhopal2.scripts
         {
 
         }
+
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

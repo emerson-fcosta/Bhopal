@@ -9,15 +9,15 @@ namespace Bhopal2.Models
     {
         public virtual long Id { get; set; }
 
-        public virtual string Tipo { get; set; }
-
         public virtual string Codigo { get; set; }
 
-        public virtual string Nome
+        public virtual string Tipo { get; set; }
+
+       /* public virtual string Nome
         {
             get
             {
-                return $"[{Id}] {Modelo.Nome} {Marca.Nome} {Tipo} ID:{Codigo}-{Fornecedor.Nome}";
+                return $"[{Id}] {Modelo.Nome}  ";
             }
         }
 
@@ -29,10 +29,20 @@ namespace Bhopal2.Models
 
         public virtual Modelo Modelo { get; set; }
 
-        public virtual Marca Marca { get; set; }
-
+        public virtual Marca Marca { get; set; }*/
+        
 
         public virtual IList<PedidoDeToner> PedidosDeToner { get; set; }
+
+        public virtual IList<Fornecedor> Fornecedores { get; set; }
+
+        public virtual IList<Departamento> Departamentos { get; set; }
+
+        public virtual IList<Modelo> Modelos { get; set; }
+
+        public virtual IList<Marca> Marcas { get; set; }
+
+        public virtual IList<Toner> Toneres { get; set; }
 
 
     }
