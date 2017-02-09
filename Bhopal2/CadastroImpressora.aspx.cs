@@ -19,39 +19,54 @@ namespace Bhopal2
                 //carregando dados no dropDownList
                 //Fornecedor
                 var f = new FornecedorDAO();
-                var impressoras = f.getAll();
-                ddlFornecedor.DataValueField = "Id";
-                ddlFornecedor.DataTextField = "Nome";
-                ddlFornecedor.DataSource = impressoras;
-                ddlFornecedor.DataBind();
+                var fornecedores = f.getAll();
+                if (fornecedores.Count > 0)
+                {
+                    ddlFornecedor.DataValueField = "Id";
+                    ddlFornecedor.DataTextField = "Nome";
+                    ddlFornecedor.DataSource = fornecedores;
+                    ddlFornecedor.DataBind();
+                }
                 //Modelo
                 var m = new ModeloDAO();
                 var modelos = m.getAll();
-                ddlModelo.DataValueField = "Id";
-                ddlModelo.DataTextField = "Nome";
-                ddlModelo.DataSource = modelos;
-                ddlModelo.DataBind();
+                if (modelos.Count > 0)
+                {
+                    ddlModelo.DataValueField = "Id";
+                    ddlModelo.DataTextField = "Nome";
+                    ddlModelo.DataSource = modelos;
+                    ddlModelo.DataBind();
+                }
                 //Departamento
                 var d = new DepartamentoDAO();
                 var departamentos = d.getAll();
-                ddlDepartamento.DataValueField = "Id";
-                ddlDepartamento.DataTextField = "Nome";
-                ddlDepartamento.DataSource = departamentos;
-                ddlDepartamento.DataBind();
+                if (departamentos.Count > 0)
+                {
+                    ddlDepartamento.DataValueField = "Id";
+                    ddlDepartamento.DataTextField = "Nome";
+                    ddlDepartamento.DataSource = departamentos;
+                    ddlDepartamento.DataBind();
+                }
                 //Marca
                 var mc = new MarcaDAO();
                 var marcas = mc.getAll();
-                ddlMarca.DataValueField = "Id";
-                ddlMarca.DataTextField = "Nome";
-                ddlMarca.DataSource = marcas;
-                ddlMarca.DataBind();
+                if (marcas.Count > 0)
+                {
+                    ddlMarca.DataValueField = "Id";
+                    ddlMarca.DataTextField = "Nome";
+                    ddlMarca.DataSource = marcas;
+                    ddlMarca.DataBind();
+                }
                 //Toner
-                var t = new TonerDAO();
-                var toneres = t.getAll();
-                ddlToner.DataValueField="Id";
-                ddlToner.DataTextField = "Codigo";
-                ddlToner.DataSource = toneres;
-                ddlToner.DataBind();
+                //var t = new TonerDAO();
+                //var toneres = t.getAll();
+                //if (toneres.Count > 0)
+                //{
+                //    ddlToner.DataValueField = "Id";
+                //    ddlToner.DataTextField = "Codigo";
+                //    ddlToner.DataSource = toneres;
+                //    ddlToner.DataBind();
+                //}
             }
         }
 
@@ -62,36 +77,27 @@ namespace Bhopal2
             imp.Tipo = txtTipo.Text.ToString();
             imp.Codigo = txtCodigoImpressora.Text.ToString();
 
-            imp.Fornecedores = new List<Fornecedor>()
-            {
-                new FornecedorBusiness().retornaId(long.Parse(ddlFornecedor.SelectedValue))
+            if (ddlFornecedor.SelectedValue != "")
+                imp.Fornecedor = new FornecedorBusiness().retornaId(long.Parse(ddlFornecedor.SelectedValue));
 
-            };
+            if (ddlModelo.SelectedValue != "")
+                imp.Modelo = new ModeloBusiness().retornaId(long.Parse(ddlModelo.SelectedValue));
 
-            imp.Modelos = new List<Modelo>()
-            {
-                new ModeloBusiness().retornaId(long.Parse(ddlModelo.SelectedValue))
-            };
+            if (ddlMarca.SelectedValue != "")
+                imp.Marca = new MarcaBusiness().retornaId(long.Parse(ddlMarca.SelectedValue));
 
-            imp.Marcas = new List<Marca>()
-            {
-                new MarcaBusiness().retornaId(long.Parse(ddlMarca.SelectedValue))
-            };
+            if (ddlDepartamento.SelectedValue != "")
+                imp.Departamento = new DepartamentoBusiness().retornaId(long.Parse(ddlDepartamento.SelectedValue));
 
-            imp.Departamentos = new List<Departamento>()
-            {
-                new DepartamentoBusiness().retornaId(long.Parse(ddlDepartamento.SelectedValue))
-            };
-
-            imp.Toneres = new List<Toner>()
-            {
-                new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue))
-            };
+            //imp.Toneres = new List<Toner>()
+            //{
+            //    new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue))
+            //};
 
             var gravaImpressora = new ImpressoraDAO();
             gravaImpressora.AdicionaImpressora(imp);
-            
 
+            Response.Redirect("/");
         }
 
         protected void txtModeloNome_TextChanged(object sender, EventArgs e)

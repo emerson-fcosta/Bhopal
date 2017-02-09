@@ -50,6 +50,9 @@
             <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server">
             </asp:DropDownList>
         </div>
+        <div class="form-group">
+            <asp:Button Text="Cadastrar" runat="server" ID="Button1" OnClick="Button1_Click" class="btn btn-success"/>
+        </div>
     </form>
 </body>
 </html>

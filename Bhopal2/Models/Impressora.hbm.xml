@@ -12,7 +12,9 @@
     <property name="Tipo" length="50" />
     <property name="Codigo" length="10" />
 
-    
+    <many-to-one name="Marca" column="MarcaId" cascade="none" />
+    <many-to-one name="Modelo" column="ModeloId" cascade="none" />
+    <many-to-one name="Fornecedor" column="FornecedorId" cascade="none" />
     
 
     <bag name="PedidosDeToner" lazy="true" cascade="all" >
@@ -20,7 +22,7 @@
       <one-to-many class="PedidoDeToner" />
     </bag>
     
-    <bag name="Fornecedores" lazy="true" cascade="none">
+    <!--<bag name="Fornecedores" lazy="true" cascade="none">
       <key column="FornecedorId"/>
       <one-to-many class="Impressora" />
         </bag>
@@ -38,7 +40,7 @@
     <bag name="Marcas" lazy="true" cascade="none">
       <key column="MarcaId"/>
       <one-to-many class="Impressora" />
-    </bag>
+    </bag>-->
     
     <bag name="Toneres" lazy="true" cascade="none">
       <key column="TonerId"/>
