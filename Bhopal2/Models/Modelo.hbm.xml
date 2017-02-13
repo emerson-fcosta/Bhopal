@@ -14,10 +14,10 @@
 
     <many-to-one name="Marca" column="MarcaId" cascade="none" />
 
-    <bag name="Impressoras" lazy="true" cascade="none" >
+    <!--<bag name="Impressoras" lazy="true" cascade="none" >
       <key column="ModeloId" />
       <one-to-many class="Impressora" />
-    </bag>
+    </bag>-->
 
   </class>
 </hibernate-mapping>

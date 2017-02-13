@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Bhopal2.Business;
+using Bhopal2.Models;
+using Bhopal2.DAO;
 
 namespace Bhopal2.scripts
 {
@@ -12,26 +14,22 @@ namespace Bhopal2.scripts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                var i = new ImpressoraBusiness();
-                var impressoras = i.retornaImpressoras();
-
-                ddlImpressoras.DataTextField = "Nome";
-                ddlImpressoras.DataValueField = "Id";
-                ddlImpressoras.DataSource = impressoras;
-                ddlImpressoras.DataBind();
-            }
+            
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+                Modelo mod = new Modelo();
+                mod.Nome = txtModeloNome.Text.ToString();
 
+                ModeloDAO gravamod = new ModeloDAO();
+                gravamod.AdicionaModelo(mod);
+
+                Response.Redirect("/");
+            
         }
+
+       
     }
 }

@@ -10,6 +10,5 @@ namespace Bhopal2.Models
 
         public virtual Marca Marca { get; set; }
 
-        public virtual IList<Impressora> Impressoras { get; set; }
     }
 }

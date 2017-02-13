@@ -156,6 +156,7 @@
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="CadastroDepartamento.aspx" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
@@ -180,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\DepartamentoBusiness.cs" />
+    <Compile Include="Business\FilialBusiness.cs" />
     <Compile Include="Business\FornecedorBusiness.cs" />
     <Compile Include="Business\ImpressoraBusiness.cs" />
     <Compile Include="Business\MarcaBusiness.cs" />
@@ -251,6 +253,13 @@
     </Compile>
     <Compile Include="CadastroToner.aspx.designer.cs">
       <DependentUpon>CadastroToner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroDepartamento.aspx.cs">
+      <DependentUpon>CadastroDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroDepartamento.aspx.designer.cs">
+      <DependentUpon>CadastroDepartamento.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
