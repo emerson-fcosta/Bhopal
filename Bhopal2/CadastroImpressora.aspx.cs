@@ -38,7 +38,7 @@ namespace Bhopal2
                     ddlModelo.DataBind();
                 }
                 //Departamento
-                var d = new DepartamentoDAO();
+                var d = new FilialDAO();
                 var departamentos = d.getAll();
                 if (departamentos.Count > 0)
                 {
@@ -57,16 +57,7 @@ namespace Bhopal2
                     ddlMarca.DataSource = marcas;
                     ddlMarca.DataBind();
                 }
-                //Toner
-                //var t = new TonerDAO();
-                //var toneres = t.getAll();
-                //if (toneres.Count > 0)
-                //{
-                //    ddlToner.DataValueField = "Id";
-                //    ddlToner.DataTextField = "Codigo";
-                //    ddlToner.DataSource = toneres;
-                //    ddlToner.DataBind();
-                //}
+                
             }
         }
 
@@ -89,13 +80,8 @@ namespace Bhopal2
             if (ddlDepartamento.SelectedValue != "")
                 imp.Departamento = new DepartamentoBusiness().retornaId(long.Parse(ddlDepartamento.SelectedValue));
 
-            //imp.Toneres = new List<Toner>()
-            //{
-            //    new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue))
-            //};
-
-            var gravaImpressora = new ImpressoraDAO();
-            gravaImpressora.AdicionaImpressora(imp);
+            var gravarImpressora = new ImpressoraDAO();
+            gravarImpressora.AdicionaImpressora(imp);
 
             Response.Redirect("/");
         }

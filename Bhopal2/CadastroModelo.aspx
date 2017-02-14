@@ -26,11 +26,8 @@
             <asp:TextBox ID="txtModeloNome" class="form-control" placeholder="Digite modelo do toner" runat="server"></asp:TextBox>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Impressora</label>
-            <asp:DropDownList ID="ddlImpressoras" class="form-control" runat="server"></asp:DropDownList>
+            <asp:Button ID="btnSalvar"  runat="server" Text="Salvar" Width="127px" OnClick="btnSalvar_Click" class="btn btn-primary"/>
         </div>
-        
-        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Width="127px" OnClick="btnSalvar_Click" />
     </form>
 </body>
 </html>
