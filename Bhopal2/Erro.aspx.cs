@@ -7,15 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Bhopal2
 {
-    public partial class Site : System.Web.UI.MasterPage
+    public partial class Erro : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Context.User.IsInRole("TI"))
-            {
-                Response.Redirect("/Erro.aspx");
 
-            }
         }
     }
 }

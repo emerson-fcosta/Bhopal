@@ -45,7 +45,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="CadastroImpressora.aspx">Impressora</a></li>
+                                <li><a href="CadastroDeImpressora.aspx">Impressora</a></li>
                                 <li><a href="CadastroModelo.aspx">Modelo</a></li>
                                 <li><a href="CadastroToner.aspx">Toner</a></li>
                                 <li role="separator" class="divider"></li>

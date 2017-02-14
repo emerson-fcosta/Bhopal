@@ -18,8 +18,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -133,6 +133,7 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="CadastroDeImpressora.aspx" />
     <Content Include="CadastroDepartamento.aspx" />
     <Content Include="CadastroImpressora.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -140,6 +141,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Erro.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -182,12 +184,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\DepartamentoBusiness.cs" />
+    <Compile Include="Business\FilialBusiness.cs" />
     <Compile Include="Business\FornecedorBusiness.cs" />
     <Compile Include="Business\ImpressoraBusiness.cs" />
     <Compile Include="Business\MarcaBusiness.cs" />
     <Compile Include="Business\ModeloBusiness.cs" />
     <Compile Include="Business\PedidoDeTonerBusiness.cs" />
     <Compile Include="Business\TonerBusiness.cs" />
+    <Compile Include="CadastroDeImpressora.aspx.cs">
+      <DependentUpon>CadastroDeImpressora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroDeImpressora.aspx.designer.cs">
+      <DependentUpon>CadastroDeImpressora.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CadastroDepartamento.aspx.cs">
       <DependentUpon>CadastroDepartamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,6 +227,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erro.aspx.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erro.aspx.designer.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
