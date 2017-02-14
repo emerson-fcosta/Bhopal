@@ -133,9 +133,10 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="CadastroDeDepartamento.aspx" />
     <Content Include="CadastroDeImpressora.aspx" />
-    <Content Include="CadastroDepartamento.aspx" />
-    <Content Include="CadastroImpressora.aspx" />
+    <Content Include="CadastroDeModelo.aspx" />
+    <Content Include="CadastroDeToner.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -178,8 +179,6 @@
     </EmbeddedResource>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="CadastroModelo.aspx" />
-    <Content Include="CadastroToner.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +190,13 @@
     <Compile Include="Business\ModeloBusiness.cs" />
     <Compile Include="Business\PedidoDeTonerBusiness.cs" />
     <Compile Include="Business\TonerBusiness.cs" />
+    <Compile Include="CadastroDeDepartamento.aspx.cs">
+      <DependentUpon>CadastroDeDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroDeDepartamento.aspx.designer.cs">
+      <DependentUpon>CadastroDeDepartamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CadastroDeImpressora.aspx.cs">
       <DependentUpon>CadastroDeImpressora.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,19 +204,19 @@
     <Compile Include="CadastroDeImpressora.aspx.designer.cs">
       <DependentUpon>CadastroDeImpressora.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CadastroDepartamento.aspx.cs">
-      <DependentUpon>CadastroDepartamento.aspx</DependentUpon>
+    <Compile Include="CadastroDeModelo.aspx.cs">
+      <DependentUpon>CadastroDeModelo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CadastroDepartamento.aspx.designer.cs">
-      <DependentUpon>CadastroDepartamento.aspx</DependentUpon>
+    <Compile Include="CadastroDeModelo.aspx.designer.cs">
+      <DependentUpon>CadastroDeModelo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CadastroImpressora.aspx.cs">
-      <DependentUpon>CadastroImpressora.aspx</DependentUpon>
+    <Compile Include="CadastroDeToner.aspx.cs">
+      <DependentUpon>CadastroDeToner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CadastroImpressora.aspx.designer.cs">
-      <DependentUpon>CadastroImpressora.aspx</DependentUpon>
+    <Compile Include="CadastroDeToner.aspx.designer.cs">
+      <DependentUpon>CadastroDeToner.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAO\ContatoDAO.cs" />
     <Compile Include="DAO\DepartamentoDAO.cs" />
@@ -264,20 +270,6 @@
     <Compile Include="Models\TipoImpressoraEnum.cs" />
     <Compile Include="Models\Toner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CadastroModelo.aspx.cs">
-      <DependentUpon>CadastroModelo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CadastroModelo.aspx.designer.cs">
-      <DependentUpon>CadastroModelo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroToner.aspx.cs">
-      <DependentUpon>CadastroToner.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CadastroToner.aspx.designer.cs">
-      <DependentUpon>CadastroToner.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
