@@ -76,7 +76,7 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <div>
+        <div class="container-fluid">
             <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
             </asp:ContentPlaceHolder>
         </div>

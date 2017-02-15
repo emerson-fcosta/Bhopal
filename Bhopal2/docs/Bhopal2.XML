@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bhopal2</name>
+    </assembly>
+    <members>
+        <member name="F:Bhopal2.CadastroDeDepartamento.lblNomeDept">
+            <summary>
+            lblNomeDept control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeDepartamento.txtNomeDept">
+            <summary>
+            txtNomeDept control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeDepartamento.lblSelcFilial">
+            <summary>
+            lblSelcFilial control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeDepartamento.ddlFilial">
+            <summary>
+            ddlFilial control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeDepartamento.Button1">
+            <summary>
+            Button1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeFornecedor.txtFornecedor">
+            <summary>
+            txtFornecedor control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeFornecedor.txtContato">
+            <summary>
+            txtContato control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeFornecedor.txtTelefone">
+            <summary>
+            txtTelefone control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeFornecedor.btnSalvar">
+            <summary>
+            btnSalvar control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeImpressora.txtTipo">
+            <summary>
+            txtTipo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeImpressora.txtCodigoImpressora">
+            <summary>
+            txtCodigoImpressora control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeImpressora.ddlMarca">
+            <summary>
+            ddlMarca control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeImpressora.ddlFornecedor">
+            <summary>
+            ddlFornecedor control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeImpressora.ddlModelo">
+            <summary>
+            ddlModelo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeImpressora.ddlDepartamento">
+            <summary>
+            ddlDepartamento control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeImpressora.Button1">
+            <summary>
+            Button1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeModelo.txtModeloNome">
+            <summary>
+            txtModeloNome control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeModelo.btnSalvar">
+            <summary>
+            btnSalvar control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeToner.TextBox1">
+            <summary>
+            TextBox1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeToner.TextBox2">
+            <summary>
+            TextBox2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeToner.CheckBox1">
+            <summary>
+            CheckBox1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.CadastroDeToner.Button1">
+            <summary>
+            Button1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Erro.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label1">
+            <summary>
+            Label1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label2">
+            <summary>
+            Label2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label3">
+            <summary>
+            Label3 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label4">
+            <summary>
+            Label4 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label5">
+            <summary>
+            Label5 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label6">
+            <summary>
+            Label6 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label8">
+            <summary>
+            Label8 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Label7">
+            <summary>
+            Label7 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Sim">
+            <summary>
+            Sim control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Não">
+            <summary>
+            Não control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Default.Button2">
+            <summary>
+            Button2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Login.loginform">
+            <summary>
+            loginform control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:Bhopal2.Models.Contato">
+            <summary>
+            Abstração de um contato
+            </summary>
+        </member>
+        <member name="P:Bhopal2.Models.Contato.Id">
+            <summary>
+            Campo identificador de um contato
+            </summary>
+        </member>
+        <member name="P:Bhopal2.Models.Contato.Nome">
+            <summary>
+            Nome de um contato
+            </summary>
+        </member>
+        <member name="P:Bhopal2.Models.Contato.Telefone">
+            <summary>
+            Telefone de um contato
+            </summary>
+        </member>
+        <member name="P:Bhopal2.Models.Contato.Fornecedor">
+            <summary>
+            Forncedor a qual o contato esta vinculado
+            </summary>
+        </member>
+        <member name="F:Bhopal2.Site.ContentPlaceHolderHead">
+            <summary>
+            ContentPlaceHolderHead control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Site.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Site.ContentPlaceHolderBody">
+            <summary>
+            ContentPlaceHolderBody control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Bhopal2.Site.ContentPlaceHolderScripts">
+            <summary>
+            ContentPlaceHolderScripts control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>

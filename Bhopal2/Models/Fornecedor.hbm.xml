@@ -9,7 +9,7 @@
       <generator class="identity"/>
     </id>
 
-    <property name="nomeFornecedor" length="50" />
+    <property name="Nome" length="50" />
 
 
     <bag name="Contatos" lazy="true" cascade="all" >
