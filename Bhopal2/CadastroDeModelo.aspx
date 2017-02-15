@@ -11,7 +11,8 @@
         <asp:TextBox ID="txtModeloNome" class="form-control" placeholder="Digite modelo do toner" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">
-        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Width="127px" OnClick="btnSalvar_Click" class="btn btn-primary" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" class="btn btn-primary" />
+        <button type="reset" class="btn btn-default">Reset</button>
     </div>
 
 </asp:Content>

@@ -5,11 +5,12 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
+    <h3>Cadastro de departamentos</h3>
     <div class="form-group">
         <asp:Label ID="lblNomeDept" runat="server" Text="Nome"></asp:Label>
     </div>
     <div class="form-group">
-        <asp:TextBox ID="txtNomeDept" class="form-group" placeholder="Informe o departamento" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtNomeDept" class="form-control" placeholder="Informe o departamento" runat="server"></asp:TextBox>
     </div>
     <div>
         <asp:Label ID="lblSelcFilial" runat="server" Text="Filial"></asp:Label>
@@ -19,6 +20,7 @@
     </div>
     <div class="form-group">
         <asp:Button ID="Button1" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="Button1_Click" />
+        <button type="reset" class="btn btn-default">Reset</button>
     </div>
 </asp:Content>
 

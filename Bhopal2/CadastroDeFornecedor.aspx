@@ -19,6 +19,7 @@
     </div>
     <div class="form-group">
         <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-primary" />
+        <button type="reset" class="btn btn-default">Reset</button>
     </div>
 </asp:Content>
 

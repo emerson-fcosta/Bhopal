@@ -35,6 +35,7 @@
     </div>
     <div class="form-group">
         <asp:Button Text="Cadastrar" runat="server" ID="Button1" OnClick="Button1_Click" class="btn btn-primary" />
+        <button type="reset" class="btn btn-default">Reset</button>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">
