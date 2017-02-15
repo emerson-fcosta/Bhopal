@@ -25,5 +25,4 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">
-
 </asp:Content>
