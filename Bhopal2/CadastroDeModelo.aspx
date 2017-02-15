@@ -6,6 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
 
+    <h3>Cadastro de modelo</h3>
     <div class="form-group">
         <label for="exampleInputEmail1">Modelo</label>
         <asp:TextBox ID="txtModeloNome" class="form-control" placeholder="Digite modelo do toner" runat="server"></asp:TextBox>

@@ -4,6 +4,8 @@
     <title>Cadastro de Impressora</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
+    
+    <h3>Cadastro de impressora</h3>
     <div class="form-group">
         <label for="exampleInputEmail1">Tipo</label>
         <asp:TextBox ID="txtTipo" class="form-control" placeholder="Digite tipo de impressora" runat="server" OnTextChanged="txtModeloNome_TextChanged"></asp:TextBox>
