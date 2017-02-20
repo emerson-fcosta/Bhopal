@@ -49,8 +49,9 @@
                                 <li><a href="CadastroDeModelo.aspx">Modelo</a></li>
                                 <li><a href="CadastroDeToner.aspx">Toner</a></li>
                                 <li><a href="CadastroDeDepartamento.aspx">Departamento</a></li>
+                                <li><a href="CadastroDeFilial.aspx">Filial</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="Login.aspx">Login</a></li>
+                                <li><a href="Login.aspx">Logoff</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Chupa cabra</a></li>
                             </ul>

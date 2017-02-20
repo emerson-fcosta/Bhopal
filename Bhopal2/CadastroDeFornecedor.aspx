@@ -19,7 +19,7 @@
         <asp:TextBox ID="txtTelefone" class="form-control" placeholder="Informe o telefone do fornecedor" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">
-        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-primary" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-primary" OnClick="btnSalvar_Click" />
         <button type="reset" class="btn btn-default">Reset</button>
     </div>
 </asp:Content>
