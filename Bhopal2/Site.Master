@@ -50,6 +50,7 @@
                                 <li><a href="CadastroDeToner.aspx">Toner</a></li>
                                 <li><a href="CadastroDeDepartamento.aspx">Departamento</a></li>
                                 <li><a href="CadastroDeFilial.aspx">Filial</a></li>
+                                <li><a href="CadastroDeMarca.aspx">Filial</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="Login.aspx">Logoff</a></li>
                                 <li role="separator" class="divider"></li>

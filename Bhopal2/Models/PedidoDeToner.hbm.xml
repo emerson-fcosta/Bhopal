@@ -10,8 +10,8 @@
     </id>
 
     <property name="NumeroChamado" length="50" />
-    <property name="DataEnvio" />
-    <property name="DataRecebimento"/>
+    <property name="dataSolicitacao" />
+    <property name="dataAlteracao"/>
     <property name="Status" length="50" />
     
        

@@ -164,9 +164,11 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="CadastroDeFilial.aspx" />
+    <Content Include="CadastroDeMarca.aspx" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="PedidoDeToner.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -287,6 +289,20 @@
     </Compile>
     <Compile Include="CadastroDeFilial.aspx.designer.cs">
       <DependentUpon>CadastroDeFilial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroDeMarca.aspx.cs">
+      <DependentUpon>CadastroDeMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroDeMarca.aspx.designer.cs">
+      <DependentUpon>CadastroDeMarca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PedidoDeToner.aspx.cs">
+      <DependentUpon>PedidoDeToner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PedidoDeToner.aspx.designer.cs">
+      <DependentUpon>PedidoDeToner.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
