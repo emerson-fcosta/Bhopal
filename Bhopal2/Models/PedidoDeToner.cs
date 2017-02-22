@@ -20,9 +20,9 @@ namespace Bhopal2.Models
 
         public virtual Impressora Impressora { get; set; }
 
-        public virtual Marca Marca { get; set; }
+        //public virtual Marca Marca { get; set; }
 
-        public virtual Toner Toner { get; set; }
+        //public virtual Toner Toner { get; set; }
 
         public virtual Departamento Departamento { get; set; }
 
