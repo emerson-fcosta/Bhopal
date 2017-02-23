@@ -51,5 +51,13 @@ namespace Bhopal2.DAO
             var list = (List<Filial>)buscaFilial.List<Filial>();
             return list;
         }
+
+        internal Filial getById(string id)
+        {
+            var session = NHibernateHelper.GetSession();
+            IQuery buscaFilial = session.CreateQuery($"from Filial f where f.Id = {id}");
+            var list = buscaFilial.List<Filial>().FirstOrDefault();
+            return list;
+        }
     }
 }

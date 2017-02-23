@@ -22,6 +22,33 @@ namespace Bhopal2.scripts {
         protected global::System.Web.UI.WebControls.TextBox txtChamado;
         
         /// <summary>
+        /// txtQauntidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQauntidade;
+        
+        /// <summary>
+        /// ddlFilial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlFilial;
+        
+        /// <summary>
+        /// ddlDepartamento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDepartamento;
+        
+        /// <summary>
         /// ddlImpressora control.
         /// </summary>
         /// <remarks>

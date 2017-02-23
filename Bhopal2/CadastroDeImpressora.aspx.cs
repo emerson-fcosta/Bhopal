@@ -37,15 +37,15 @@ namespace Bhopal2
                     ddlModelo.DataSource = modelos;
                     ddlModelo.DataBind();
                 }
-                //Departamento
-                var d = new FilialDAO();
-                var departamentos = d.getAll();
-                if (departamentos.Count > 0)
+                //Filial
+                var filial = new FilialDAO();
+                var filiais = filial.getAll();
+                if (filiais.Count > 0)
                 {
-                    ddlDepartamento.DataValueField = "Id";
-                    ddlDepartamento.DataTextField = "Nome";
-                    ddlDepartamento.DataSource = departamentos;
-                    ddlDepartamento.DataBind();
+                    ddlFilial.DataValueField = "Id";
+                    ddlFilial.DataTextField = "Nome";
+                    ddlFilial.DataSource = filiais;
+                    ddlFilial.DataBind();
                 }
                 //Marca
                 var mc = new MarcaDAO();
@@ -115,5 +115,20 @@ namespace Bhopal2
         {
 
         }
+
+        protected void ddlFilial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Departamento
+            var d = new DepartamentoDAO();
+            var departamentos = d.getByFilial(new FilialDAO().getById(ddlFilial.SelectedValue));
+            if (departamentos.Count > 0)
+            {
+                ddlDepartamento.DataValueField = "Id";
+                ddlDepartamento.DataTextField = "Nome";
+                ddlDepartamento.DataSource = departamentos;
+                ddlDepartamento.DataBind();
+            }
+        }
+
     }
 }

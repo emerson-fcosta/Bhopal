@@ -2,9 +2,9 @@
 using Bhopal2.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using NHibernate;
+using System.Linq;
 
 namespace Bhopal2.DAO
 {
@@ -54,5 +54,17 @@ namespace Bhopal2.DAO
             var list = (List<Departamento>)buscaDepartamento.List<Departamento>();
             return list;
         }
+
+        public IList<Departamento> getByFilial(Filial f)
+        {
+
+            var session = NHibernateHelper.GetSession();
+
+            IQuery buscaDepartamento = session.CreateQuery($"from Departamento d where d.Filial = {f.Id}");
+            var list = buscaDepartamento.List<Departamento>().ToList();
+            return list;
+
+        }
+
     }
 }

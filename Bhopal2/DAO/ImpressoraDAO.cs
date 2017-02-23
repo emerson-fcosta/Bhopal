@@ -51,5 +51,22 @@ namespace Bhopal2.DAO
 
         }
 
+        internal Impressora getById(string id)
+        {
+            var session = NHibernateHelper.GetSession();
+            IQuery buscaImpressora = session.CreateQuery($"from Impressora i where i.Id = {id}");
+            var list = buscaImpressora.List<Impressora>().FirstOrDefault();
+            return list;
+        }
+
+        public IList<Impressora> getByDepartamento(Departamento d)
+        {
+            var session = NHibernateHelper.GetSession();
+
+            IQuery buscaImpressora = session.CreateQuery($"from Departamento dep where dep.Impressora = {d.Id}");
+            var list = buscaImpressora.List<Impressora>().ToList();
+            return list;
+        }
+
     }
 }

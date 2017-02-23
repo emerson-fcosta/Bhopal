@@ -12,19 +12,37 @@
     </div>
 
     <div class="form-group">
+        <label for="exampleInputEmail1">Quantidade</label>
+        <asp:TextBox ID="txtQauntidade" class="form-control" placeholder="Informe a quantidade" runat="server"></asp:TextBox>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Filial</label>
+        <asp:DropDownList ID="ddlFilial" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione a filial" OnSelectedIndexChanged="ddlFilial_SelectedIndexChanged">
+            </asp:DropDownList>
+        </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Departamento</label>
+        <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server" ToolTip="Selecione o departamento" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
+            </asp:DropDownList>
+        </div>
+
+    <div class="form-group">
         <label for="exampleInputEmail1">Impressora</label>
         <asp:DropDownList ID="ddlImpressora" class="form-control" runat="server" ToolTip="Selecione a impressora">
             </asp:DropDownList>
         </div>
 
+
     <div class="form-group">
         <label for="exampleInputEmail1">Data de Solicitação</label>
-        <label ID="lblDataSolic" for="exampleInputEmail1">--</label>
+        <label ID="lblDataSolic" for="exampleInputEmail1"><%= DateTime.Now %></label>
         </div>
 
     <div class="form-group">
         <asp:Button Text="Cadastrar" runat="server" ID="BtnCad" class="btn btn-primary" />
-        <button type="reset" class="btn btn-default">Reset</button>
+        <button type="reset" class="btn btn-default">Cancelar</button>
         </div>
 
 </asp:Content>
