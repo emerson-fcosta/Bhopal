@@ -74,8 +74,18 @@ namespace Bhopal2
             if (ddlModelo.SelectedValue != "")
                 imp.Modelo = new ModeloBusiness().retornaId(long.Parse(ddlModelo.SelectedValue));
 
+            if (ddlToner.SelectedValue !="")
+            {
+                imp.Toneres = new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue));
+            }
+
             if (ddlMarca.SelectedValue != "")
                 imp.Marca = new MarcaBusiness().retornaId(long.Parse(ddlMarca.SelectedValue));
+
+            if (ddlFilial.SelectedValue != "")
+            {
+                imp.Filial = new FilialBusiness().retornaId(long.Parse(ddlFilial.SelectedValue));
+            }
 
             if (ddlDepartamento.SelectedValue != "")
                 imp.Departamento = new DepartamentoBusiness().retornaId(long.Parse(ddlDepartamento.SelectedValue));
@@ -83,7 +93,7 @@ namespace Bhopal2
             var gravarImpressora = new ImpressoraDAO();
             gravarImpressora.AdicionaImpressora(imp);
 
-            Response.Redirect("/");
+            Response.Redirect("CadastroDeImpressora.aspx");
         }
 
         protected void txtModeloNome_TextChanged(object sender, EventArgs e)

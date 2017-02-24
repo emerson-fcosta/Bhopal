@@ -26,8 +26,10 @@ namespace Bhopal2.Models
          public virtual Departamento Departamento { get; set; }
 
          public virtual Modelo Modelo { get; set; }
-
+        
          public virtual Marca Marca { get; set; }
+
+         public virtual Filial Filial { get; set; }
 
 
         public virtual IList<PedidoDeToner> PedidosDeToner { get; set; }

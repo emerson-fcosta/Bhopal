@@ -15,6 +15,8 @@
     <many-to-one name="Marca" column="MarcaId" cascade="none" />
     <many-to-one name="Modelo" column="ModeloId" cascade="none" />
     <many-to-one name="Fornecedor" column="FornecedorId" cascade="none" />
+    <many-to-one name="Filial" column="FilialID" cascade="none" />
+    
     
 
     <bag name="PedidosDeToner" lazy="true" cascade="all" >
