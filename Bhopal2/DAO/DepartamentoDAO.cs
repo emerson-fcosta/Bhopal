@@ -59,11 +59,18 @@ namespace Bhopal2.DAO
         {
 
             var session = NHibernateHelper.GetSession();
-
             IQuery buscaDepartamento = session.CreateQuery($"from Departamento d where d.Filial = {f.Id}");
             var list = buscaDepartamento.List<Departamento>().ToList();
             return list;
 
+        }
+
+        internal Departamento getById(string id)
+        {
+            var session = NHibernateHelper.GetSession();
+            IQuery buscaDepartamento = session.CreateQuery($"from Departamento d where d.Id = {id}");
+            var list = buscaDepartamento.List<Departamento>().FirstOrDefault();
+            return list;
         }
 
     }

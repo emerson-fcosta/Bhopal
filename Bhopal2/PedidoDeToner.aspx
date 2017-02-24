@@ -24,13 +24,13 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Departamento</label>
-        <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server" ToolTip="Selecione o departamento" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
+        <asp:DropDownList ID="ddlDepartamento" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione o departamento" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
             </asp:DropDownList>
         </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Impressora</label>
-        <asp:DropDownList ID="ddlImpressora" class="form-control" runat="server" ToolTip="Selecione a impressora">
+        <asp:DropDownList ID="ddlImpressora" class="form-control" AutoPostBack="true" runat="server" ToolTip="Selecione a impressora" OnSelectedIndexChanged="ddlImpressora_SelectedIndexChanged">
             </asp:DropDownList>
         </div>
 

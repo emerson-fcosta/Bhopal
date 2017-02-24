@@ -1,5 +1,7 @@
 ﻿using Bhopal2.DAO;
+using Bhopal2.Infra;
 using Bhopal2.Models;
+using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,8 +50,19 @@ namespace Bhopal2.scripts
         {
             //Impressora
             var i = new ImpressoraDAO();
-            var impressoras = i.getByDepartamento(new DepartamentoDAO().)
+            var impressoras = i.getByDepartamento(new DepartamentoDAO().getById(ddlDepartamento.SelectedValue));
+            if (impressoras.Count > 0)
+            {
+                ddlImpressora.DataValueField = "Id";
+                ddlImpressora.DataTextField = "Nome";
+                ddlImpressora.DataSource = impressoras;
+                ddlImpressora.DataBind();
+            }
 
+        }
+
+        protected void ddlImpressora_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
