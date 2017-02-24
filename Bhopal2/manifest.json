@@ -1,0 +1,14 @@
+﻿{
+  "name": "Bhopal",
+  "icons": [
+    {
+      "src": "images/touch-icon-android-36.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "density": 0.75
+    }
+  ],
+  "start_url": "index",
+  "display": "standalone",
+  "orientation": "landscape"
+}
