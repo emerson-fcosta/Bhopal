@@ -1,4 +1,5 @@
-﻿using Bhopal2.DAO;
+﻿using Bhopal2.Business;
+using Bhopal2.DAO;
 using Bhopal2.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,21 @@ namespace Bhopal2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                //Carregando dados no DropDownList
+                //Impressora
+                var i = new ImpressoraDAO();
+                var impressoras = i.getAll();
+                if (impressoras.Count > 0)
+                {
+                    ddlImpressora.DataValueField = "Id";
+                    ddlImpressora.DataTextField = "Codigo";
+                    ddlImpressora.DataSource = impressoras;
+                    ddlImpressora.DataBind();
+                }
+
+            }
 
         }
 
@@ -27,6 +43,9 @@ namespace Bhopal2
             t.Cor = TextBox1.Text.ToString();
             t.Codigo = TextBox2.Text.ToString();
             t.Colorido = CheckBox1.Checked;
+
+            if (ddlImpressora.SelectedValue != "")
+                t.Impressora = new ImpressoraBusiness().GetByID(long.Parse(ddlImpressora.SelectedValue));
             
             var gravaToner = new TonerDAO();
             gravaToner.AdicionaToner(t);

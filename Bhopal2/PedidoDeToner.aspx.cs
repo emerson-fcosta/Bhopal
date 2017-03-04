@@ -63,6 +63,16 @@ namespace Bhopal2.scripts
 
         protected void ddlImpressora_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Toner
+            var t = new TonerDAO();
+            var toneres = t.getByImpressora(new ImpressoraDAO().getById(ddlImpressora.SelectedValue));
+            if (toneres.Count > 0)
+            {
+                ddlToner.DataValueField = "Id";
+                ddlToner.DataTextField = "Codigo";
+                ddlToner.DataSource = toneres;
+                ddlToner.DataBind();
+            }
             
         }
     }

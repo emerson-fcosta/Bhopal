@@ -53,5 +53,13 @@ namespace Bhopal2.DAO
             var list = (List<Toner>)buscaToneres.List<Toner>();
             return list;
         }
+
+        public IList<Toner> getByImpressora(Impressora I)
+        {
+            var session = NHibernateHelper.GetSession();
+            IQuery buscaToner = session.CreateQuery($"from Toner t where t.Id = {I.Id}");
+            var list = buscaToner.List<Toner>().ToList();
+            return list;
+        }
     }
 }

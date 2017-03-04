@@ -14,6 +14,8 @@ namespace Bhopal2.Models
 
         public virtual string Codigo { get; set; }
 
+        public virtual Impressora Impressora { get; set; }
+
         /// <summary>
         /// Impressoras compativeis <seealso cref="Impressora"/>
         /// </summary>

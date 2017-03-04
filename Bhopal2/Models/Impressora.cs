@@ -31,6 +31,8 @@ namespace Bhopal2.Models
 
          public virtual Filial Filial { get; set; }
 
+         public virtual Toner Toner { get; set; }
+
 
         public virtual IList<PedidoDeToner> PedidosDeToner { get; set; }
 

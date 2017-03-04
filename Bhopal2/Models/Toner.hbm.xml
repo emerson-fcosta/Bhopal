@@ -13,6 +13,8 @@
     <property name="Codigo" length="10" />
     <property name="Colorido" />
     
+    <many-to-one name="Impressora" column="ImpressoraID" cascade="none"/>
+    
     <bag name="Impressoras" lazy="true" cascade="none">
       <key column="ImpressoraId"/>
       <one-to-many class="Toner"/>

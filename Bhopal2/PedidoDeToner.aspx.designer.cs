@@ -58,6 +58,15 @@ namespace Bhopal2.scripts {
         protected global::System.Web.UI.WebControls.DropDownList ddlImpressora;
         
         /// <summary>
+        /// ddlToner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlToner;
+        
+        /// <summary>
         /// BtnCad control.
         /// </summary>
         /// <remarks>

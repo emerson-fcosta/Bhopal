@@ -14,6 +14,11 @@
         <label for="exampleInputEmail1">Codigo</label>
         <asp:TextBox ID="TextBox2" type="text" class="form-control" placeholder="Digite o codigo" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
     </div>
+     <div class="form-group">
+        <label for="exempleInputEmail1">Impressora</label>
+        <asp:DropDownList ID="ddlImpressora" class="form-control" AutoPostBack="true" runat="server" ToolTip="Selecione a impressora correspondente ao toner a ser cadastrado">
+            </asp:DropDownList>
+        </div>
     <div class="form-group">
         <asp:CheckBox ID="CheckBox1" runat="server" Text=" Colorido ?" />
     </div>

@@ -58,6 +58,17 @@ namespace Bhopal2
                     ddlMarca.DataBind();
                 }
 
+                //Toner
+                var t = new TonerDAO();
+                var toneres = t.getAll();
+                if(toneres.Count > 0 )
+                {
+                    ddlToner.DataValueField = "Id";
+                    ddlToner.DataTextField = "Codigo";
+                    ddlToner.DataSource = toneres;
+                    ddlToner.DataBind();
+                }
+
             }
         }
 
@@ -76,7 +87,7 @@ namespace Bhopal2
 
             if (ddlToner.SelectedValue !="")
             {
-                imp.Toneres = new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue));
+                imp.Toner = new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue));
             }
 
             if (ddlMarca.SelectedValue != "")

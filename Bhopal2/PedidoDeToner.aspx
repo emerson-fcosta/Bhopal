@@ -33,6 +33,11 @@
         <asp:DropDownList ID="ddlImpressora" class="form-control" AutoPostBack="true" runat="server" ToolTip="Selecione a impressora" OnSelectedIndexChanged="ddlImpressora_SelectedIndexChanged">
             </asp:DropDownList>
         </div>
+    <div class="form-group">
+        <label for="exempleInputEmail1">Toner</label>
+        <asp:DropDownList ID="ddlToner" class="form-control" AutoPostBack="true" runat="server" ToolTip="Selecione o modelo do toner">
+            </asp:DropDownList>
+        </div>
 
 
     <div class="form-group">
