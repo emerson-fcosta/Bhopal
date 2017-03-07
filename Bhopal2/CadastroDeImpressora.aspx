@@ -39,18 +39,18 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Filial</label>
-        <asp:DropDownList ID="ddlFilial" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlFilial_SelectedIndexChanged" >
+        <asp:DropDownList ID="ddlFilial" class="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlFilial_SelectedIndexChanged" >
         </asp:DropDownList>
         
         </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Departamento</label>
-        <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server">
+        <asp:DropDownList ID="ddlDepartamento" class="form-control" AutoPostBack="true" runat="server">
         </asp:DropDownList>
     </div>
     <div class="form-group">
         <asp:Button Text="Cadastrar" runat="server" ID="Button1" OnClick="Button1_Click" class="btn btn-primary" />
-        <button type="reset" class="btn btn-default">Reset</button>
+        <button type="reset" class="btn btn-default">Cancelar</button>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">

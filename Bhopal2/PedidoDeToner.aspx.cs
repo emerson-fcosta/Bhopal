@@ -15,6 +15,7 @@ namespace Bhopal2.scripts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Carregando dados no DropDownList
             if (!IsPostBack)
             {
                 var f = new FilialDAO();
@@ -32,7 +33,7 @@ namespace Bhopal2.scripts
 
         protected void ddlFilial_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
             //Departamento
             var d = new DepartamentoDAO();
             var departamentos = d.getByFilial(new FilialDAO().getById(ddlFilial.SelectedValue));

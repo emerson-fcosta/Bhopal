@@ -47,6 +47,16 @@ namespace Bhopal2
                     ddlFilial.DataSource = filiais;
                     ddlFilial.DataBind();
                 }
+                //Departamento
+                var departamento = new DepartamentoDAO();
+                var departamentos = departamento.getAll();
+                if(departamentos.Count > 0)
+                {
+                    ddlDepartamento.DataValueField = "Id";
+                    ddlDepartamento.DataTextField = "Nome";
+                    ddlDepartamento.DataSource = departamentos;
+                    ddlDepartamento.DataBind();
+                }
                 //Marca
                 var mc = new MarcaDAO();
                 var marcas = mc.getAll();

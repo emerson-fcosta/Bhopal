@@ -13,14 +13,14 @@
         <asp:TextBox ID="txtNomeDept" class="form-control" placeholder="Informe o departamento" runat="server"></asp:TextBox>
     </div>
     <div>
-        <asp:Label ID="lblSelcFilial" runat="server" Text="Filial"></asp:Label>
+        <asp:Label ID="lblSelecFilial" runat="server" Text="Filial"></asp:Label>
     </div>
     <div class="form-group">
-        <asp:DropDownList ID="ddlFilial" CssClass="form-control" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddlFilial" class="form-control" runat="server"></asp:DropDownList>
     </div>
     <div class="form-group">
-        <asp:Button ID="Button1" runat="server" Text="Salvar" CssClass="btn btn-primary" OnClick="Button1_Click" />
-        <button type="reset" class="btn btn-default">Reset</button>
+        <asp:Button ID="Button1" runat="server" Text="Salvar" class="btn btn-primary" OnClick="Button1_Click" />
+        <button type="reset" class="btn btn-default">Cancelar</button>
     </div>
 </asp:Content>
 
