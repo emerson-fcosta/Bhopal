@@ -45,7 +45,7 @@
         </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Departamento</label>
-        <asp:DropDownList ID="ddlDepartamento" class="form-control" AutoPostBack="true" runat="server">
+        <asp:DropDownList ID="ddlDepartamento" class="form-control" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
         </asp:DropDownList>
     </div>
     <div class="form-group">

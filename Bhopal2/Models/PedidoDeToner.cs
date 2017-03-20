@@ -17,6 +17,8 @@ namespace Bhopal2.Models
 
         public virtual string Status { get; set; }
 
+        public virtual string Quantidade { get; set; }
+
 
         public virtual Impressora Impressora { get; set; }
 

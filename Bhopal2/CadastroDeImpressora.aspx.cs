@@ -110,6 +110,7 @@ namespace Bhopal2
 
             if (ddlDepartamento.SelectedValue != "")
                 imp.Departamento = new DepartamentoBusiness().retornaId(long.Parse(ddlDepartamento.SelectedValue));
+                
 
             var gravarImpressora = new ImpressoraDAO();
             gravarImpressora.AdicionaImpressora(imp);
@@ -161,5 +162,9 @@ namespace Bhopal2
             }
         }
 
+        protected void ddlDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

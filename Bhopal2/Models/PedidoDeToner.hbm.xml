@@ -13,6 +13,7 @@
     <property name="dataSolicitacao" />
     <property name="dataAlteracao"/>
     <property name="Status" length="50" />
+    <property name="Quantidade"/>
     
        
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PedidoDeToner.aspx.cs" Inherits="Bhopal2.scripts.PedidoDeToner" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PedidoDeToner.aspx.cs" Inherits="PedidosDeToner" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHead" runat="server">
     <title>Pedido de Toner</title>
 </asp:Content>
@@ -13,24 +13,24 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Quantidade</label>
-        <asp:TextBox ID="txtQauntidade" class="form-control" placeholder="Informe a quantidade" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtQuantidade" class="form-control" placeholder="Informe a quantidade" runat="server"></asp:TextBox>
     </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Filial</label>
-        <asp:DropDownList ID="ddlFilial" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione a filial" OnSelectedIndexChanged="ddlFilial_SelectedIndexChanged">
+        <asp:DropDownList ID="ddlFilial" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione a filial" ">
             </asp:DropDownList>
         </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Departamento</label>
-        <asp:DropDownList ID="ddlDepartamento" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione o departamento" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
+        <asp:DropDownList ID="ddlDepartamento" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione o departamento" >
             </asp:DropDownList>
         </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Impressora</label>
-        <asp:DropDownList ID="ddlImpressora" class="form-control" AutoPostBack="true" runat="server" ToolTip="Selecione a impressora" OnSelectedIndexChanged="ddlImpressora_SelectedIndexChanged">
+        <asp:DropDownList ID="ddlImpressora" class="form-control" AutoPostBack="true" runat="server" ToolTip="Selecione a impressora" >
             </asp:DropDownList>
         </div>
     <div class="form-group">
@@ -46,7 +46,7 @@
         </div>
 
     <div class="form-group">
-        <asp:Button Text="Cadastrar" runat="server" ID="BtnCad" class="btn btn-primary" />
+        <asp:Button Text="Cadastrar" runat="server" ID="BtnCad" class="btn btn-primary" OnClick="BtnCad_Click" />
         <button type="reset" class="btn btn-default">Cancelar</button>
         </div>
 

@@ -14,7 +14,7 @@ namespace Bhopal2.Business
         {
             var session = NHibernateHelper.GetSession();
            
-            string buscaPedido = "from PedidoDeToner p order by p.Id";
+            string buscaPedido = "from PedidosDeToner p order by p.Id";
             IQuery executaQuery = session.CreateQuery(buscaPedido);
             IList<PedidoDeToner> pedidos = executaQuery.List<PedidoDeToner>();
 
@@ -30,7 +30,7 @@ namespace Bhopal2.Business
         {
             var session = NHibernateHelper.GetSession();
             
-            string buscaPedido = "from PedidoDeToner p order by p.Id join fetch p.Filial.Nome";
+            string buscaPedido = "from PedidosDeToner p order by p.Id join fetch p.Filial.Nome";
             IQuery executaQuery = session.CreateQuery(buscaPedido);
             IList<PedidoDeToner> pedidos = executaQuery.List<PedidoDeToner>();
 
@@ -47,7 +47,7 @@ namespace Bhopal2.Business
         {
             var session = NHibernateHelper.GetSession();
             
-            IQuery buscaPedido = session.CreateQuery("from PedidoDeToner p where p.NumeroChamado = :chamado order by p.Id");
+            IQuery buscaPedido = session.CreateQuery("from PedidosDeToner p where p.NumeroChamado = :chamado order by p.Id");
             buscaPedido.SetParameter("chamado", 0);
             IList<PedidoDeToner> pedidos = buscaPedido.List<PedidoDeToner>();
 

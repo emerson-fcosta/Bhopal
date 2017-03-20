@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace Bhopal2.scripts
 {
-    public partial class PedidoDeToner : System.Web.UI.Page
+    public partial class PedidosDeToner : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,10 +22,11 @@ namespace Bhopal2.scripts
                 var filiais = f.getAll();
                 if (filiais.Count > 0)
                 {
-                    ddlFilial.DataValueField = "Id";
-                    ddlFilial.DataTextField = "Nome";
-                    ddlFilial.DataSource = filiais;
-                    ddlFilial.DataBind();
+                    //ddlFilial.DataValueField = "Id";
+                    //ddlFilial.DataTextField = "Nome";
+                    //ddlFilial.DataSource = filiais;
+                    //ddlFilial.DataBind();
+                    
                 }
                 
             }
@@ -39,10 +40,7 @@ namespace Bhopal2.scripts
             var departamentos = d.getByFilial(new FilialDAO().getById(ddlFilial.SelectedValue));
             if (departamentos.Count > 0)
             {
-                ddlDepartamento.DataValueField = "Id";
-                ddlDepartamento.DataTextField = "Nome";
-                ddlDepartamento.DataSource = departamentos;
-                ddlDepartamento.DataBind();
+                
             }
 
         }
@@ -54,10 +52,7 @@ namespace Bhopal2.scripts
             var impressoras = i.getByDepartamento(new DepartamentoDAO().getById(ddlDepartamento.SelectedValue));
             if (impressoras.Count > 0)
             {
-                ddlImpressora.DataValueField = "Id";
-                ddlImpressora.DataTextField = "Nome";
-                ddlImpressora.DataSource = impressoras;
-                ddlImpressora.DataBind();
+                
             }
 
         }
@@ -69,11 +64,15 @@ namespace Bhopal2.scripts
             var toneres = t.getByImpressora(new ImpressoraDAO().getById(ddlImpressora.SelectedValue));
             if (toneres.Count > 0)
             {
-                ddlToner.DataValueField = "Id";
-                ddlToner.DataTextField = "Codigo";
-                ddlToner.DataSource = toneres;
-                ddlToner.DataBind();
+                
             }
+            
+        }
+
+        protected void BtnCad_Click(object sender, EventArgs e)
+        {
+            //Salvando os dados do pedido de toner
+            
             
         }
     }
