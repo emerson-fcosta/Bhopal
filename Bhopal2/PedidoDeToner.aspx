@@ -18,7 +18,7 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Filial</label>
-        <asp:DropDownList ID="ddlFilial" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione a filial" ">
+        <asp:DropDownList ID="ddlFilial" AutoPostBack="true" class="form-control" runat="server" ToolTip="Selecione a filial">
             </asp:DropDownList>
         </div>
 
