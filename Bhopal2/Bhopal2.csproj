@@ -165,6 +165,7 @@
     <Content Include="manifest.json" />
     <Content Include="bower.json" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="PedidoDeToner.aspx" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="CadastroDeFilial.aspx" />
@@ -292,6 +293,13 @@
     <Compile Include="Models\PedidoDeToner.cs" />
     <Compile Include="Models\TipoImpressoraEnum.cs" />
     <Compile Include="Models\Toner.cs" />
+    <Compile Include="PedidoDeToner.aspx.cs">
+      <DependentUpon>PedidoDeToner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PedidoDeToner.aspx.designer.cs">
+      <DependentUpon>PedidoDeToner.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CadastroDeFilial.aspx.cs">
       <DependentUpon>CadastroDeFilial.aspx</DependentUpon>
