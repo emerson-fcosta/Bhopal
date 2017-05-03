@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bhopal2.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +16,55 @@ namespace Bhopal2
             if (!Page.IsPostBack)
                 {
                 //carrega dados no drop down list
-                //
+                //Filial
+                var filial = new FilialDAO();
+                var filiais = filial.getAll();
+                if (filiais.Count > 0)
+                {
+                    ddlFilial.DataValueField = "Id";
+                    ddlFilial.DataTextField = "Nome";
+                    ddlFilial.DataSource = filiais;
+                    ddlFilial.DataBind();
+                }
+                //Departamento
+                var departamento = new DepartamentoDAO();
+                var departamentos = departamento.getAll();
+                if (departamentos.Count > 0)
+                {
+                    //ddlDepartamento.DataValueField = "Id";
+                    ddlDepartamento.DataTextField = "Nome";
+                    ddlDepartamento.DataSource = departamentos;
+                    ddlDepartamento.DataBind();
+                }
+                //Marca
+                var mc = new MarcaDAO();
+                var marcas = mc.getAll();
+                if (marcas.Count > 0)
+                {
+                    ddlMarca.DataValueField = "Id";
+                    ddlMarca.DataTextField = "Nome";
+                    ddlMarca.DataSource = marcas;
+                    ddlMarca.DataBind();
+                }
+
+                //Toner
+                var t = new TonerDAO();
+                var toneres = t.getAll();
+                if (toneres.Count > 0)
+                {
+                    ddlToner.DataValueField = "Id";
+                    ddlToner.DataTextField = "Codigo";
+                    ddlToner.DataSource = toneres;
+                    ddlToner.DataBind();
+                }
 
             }
+        }
+
+        protected void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            PedidoDeToner p = new PedidoDeToner();
+            
         }
     }
 }

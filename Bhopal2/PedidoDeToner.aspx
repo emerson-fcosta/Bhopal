@@ -16,32 +16,33 @@
         </div>
     <div class="form-group">
     <label for="exempleInputEmail1">Filial</label>
-        <asp:DropDownList ID="ddlFilial" class="form-control" ToolTip="Selecione a Filial" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddlFilial" class="form-control" AutoPostBack="True" ToolTip="Selecione a Filial" runat="server"></asp:DropDownList>
         </div>
     <div class="form-group">
     <label for="exempleInputEmail1">Departamento</label>
-        <asp:DropDownList ID="ddlDepartamento" class="form-control" ToolTip="Selecione o Departamento" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddlDepartamento" CssClass="form-control" AutoPostBack="true" ToolTip="Selecione o departamento" runat="server"></asp:DropDownList>
         </div>
     <div class="form-group">
     <label for="exempleInputEmail1">Impressora</label>
-        <asp:DropDownList ID="ddlImpressora" class="form-control" ToolTip="Selecione a Impressora" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddlImpressora" class="form-control" AutoPostBack="True" ToolTip="Selecione a Impressora" runat="server"></asp:DropDownList>
         </div>
     <div class="form-group">
     <label for="exempleInputEmail1">Marca</label>
-        <asp:DropDownList ID="ddlMarca" class="form-control" ToolTip="Selecione a Marca da Impressora" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddlMarca" class="form-control" AutoPostBack="True" ToolTip="Selecione a Marca da Impressora" runat="server"></asp:DropDownList>
         </div>
     <div class="form-group">
     <label for="exempleInputEmail1">Toner</label>
-        <asp:DropDownList ID="ddlToner" class="form-control" ToolTip="Selecione o Toner" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddlToner" class="form-control" AutoPostBack="True" ToolTip="Selecione o Toner" runat="server"></asp:DropDownList>
         </div>
     <div>
         <label for="exempleInputEmail1">Data da Solicitação:</label>
         <label for="exempleInputEmail1"><%= DateTime.Now %></label>
         </div>
     <div class="form-group">
-        <asp:Button Text="Cadastrar" runat="server" ID="Button1" OnClick="Button1_Click" class="btn btn-primary" />
+        <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" class="btn btn-primary" OnClick="btnCadastrar_Click"/>
         <button type="reset" class="btn btn-default">Cancelar</button>
     </div>
+    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">
 </asp:Content>
