@@ -63,6 +63,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="PedidoDeToner.aspx">Pedido de Toner</a></li>
                                 <li role="separator" class="divider"></li>
+                                <li><a href="ImportarArquivo.aspx">Importar Arquivo</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
