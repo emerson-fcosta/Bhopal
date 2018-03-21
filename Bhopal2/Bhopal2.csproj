@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -150,6 +151,26 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Impressoras.aspx" />
     <Content Include="Login.aspx" />
+    <EmbeddedResource Include="Models\Dispositivo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Impressao.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Linguagem.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Pessoa.hbm.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\TamanhoPapel.hbm.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Usuario.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -285,14 +306,20 @@
     </Compile>
     <Compile Include="Models\Contato.cs" />
     <Compile Include="Models\Departamento.cs" />
+    <Compile Include="Models\Dispositivo.cs" />
     <Compile Include="Models\Filial.cs" />
     <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\Impressao.cs" />
     <Compile Include="Models\Impressora.cs" />
+    <Compile Include="Models\Linguagem.cs" />
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Models\Modelo.cs" />
     <Compile Include="Models\PedidoDeToner.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\TamanhoPapel.cs" />
     <Compile Include="Models\TipoImpressoraEnum.cs" />
     <Compile Include="Models\Toner.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="PedidoDeToner.aspx.cs">
       <DependentUpon>PedidoDeToner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

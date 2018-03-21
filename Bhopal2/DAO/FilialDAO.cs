@@ -10,7 +10,7 @@ namespace Bhopal2.DAO
 {
     public class FilialDAO
     {
-        public void AdicionaFilial(Filial filial)
+        internal void AdicionaFilial(Filial filial)
         {
             var session = NHibernateHelper.GetSession();
 
@@ -21,7 +21,7 @@ namespace Bhopal2.DAO
             session.Close();
         }
 
-        public void RemoveFilial(Filial filial)
+        internal void RemoveFilial(Filial filial)
         {
             var session = NHibernateHelper.GetSession();
 
@@ -33,7 +33,7 @@ namespace Bhopal2.DAO
 
         }
 
-        public void AtualizaFilial(Filial filial)
+        internal void AtualizaFilial(Filial filial)
         {
             var session = NHibernateHelper.GetSession();
 
@@ -44,7 +44,7 @@ namespace Bhopal2.DAO
             session.Close();
         }
 
-        public IList<Filial> getAll()
+        internal IList<Filial> getAll()
         {
             var session = NHibernateHelper.GetSession();
             IQuery buscaFilial = session.CreateQuery($"from Filial f");

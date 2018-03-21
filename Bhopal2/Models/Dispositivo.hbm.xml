@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Bhopal2"
+                   namespace="Bhopal2.Models" >
+
+  <class name="Dispositivo">
+
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Nome" length="50" />
+
+    <many-to-one name="Usuario" column="UsuarioId" cascade="none" />
+
+    <bag name="Impressoes" lazy="true" cascade="none">
+      <key column="DispositivoId"/>
+      <one-to-many class="Impressao"/>
+    </bag>
+
+  </class>
+</hibernate-mapping>

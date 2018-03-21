@@ -10,8 +10,7 @@ namespace Bhopal2.Models
         public virtual long Id { get; set; }
 
         public virtual string Nome { get; set; }
-
-
+        
         public virtual IList<Contato> Contatos { get; set; }
 
         public virtual IList<Impressora> Impressoras { get; set; }

@@ -19,7 +19,7 @@
     </bag>
 
     <bag name="PedidosDeToner" lazy="true" cascade="none" >
-      <key column="IdPedidoDeToner" />
+      <key column="DepartamentoId" />
       <one-to-many class="PedidoDeToner" />
     </bag>
 

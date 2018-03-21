@@ -8,14 +8,10 @@
     <h3>Cadastro de departamentos</h3>
     <div class="form-group">
         <asp:Label ID="lblNomeDept" runat="server" Text="Nome"></asp:Label>
-    </div>
-    <div class="form-group">
         <asp:TextBox ID="txtNomeDept" class="form-control" placeholder="Informe o departamento" runat="server"></asp:TextBox>
     </div>
-    <div>
-        <asp:Label ID="lblSelecFilial" runat="server" Text="Filial"></asp:Label>
-    </div>
     <div class="form-group">
+        <asp:Label ID="lblSelecFilial" runat="server" Text="Filial"></asp:Label>
         <asp:DropDownList ID="ddlFilial" class="form-control" runat="server"></asp:DropDownList>
     </div>
     <div class="form-group">

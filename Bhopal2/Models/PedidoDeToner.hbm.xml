@@ -10,20 +10,18 @@
     </id>
 
     <property name="NumeroChamado" length="50" />
-    <property name="dataSolicitacao" />
-    <property name="dataAlteracao"/>
+    <property name="DataSolicitacao" />
+    <property name="DataAlteracao"/>
     <property name="Status" length="50" />
     <property name="Quantidade"/>
-    
-       
+         
 
     <many-to-one name="Impressora" column="ImpressoraId" cascade="none" />
     <many-to-one name="Marca" column="MarcaId" cascade="none" />
     <many-to-one name="Toner" column="TonerId" cascade="none" />
     <many-to-one name="Departamento" column="DepartamentoId" cascade="none" />
     <many-to-one name="Filial" column="FilialId" cascade="none" />
-
-    
+   
 
   </class>
 </hibernate-mapping>

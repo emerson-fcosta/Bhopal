@@ -31,15 +31,6 @@ namespace Bhopal2 {
         protected global::System.Web.UI.WebControls.TextBox txtCodigoImpressora;
         
         /// <summary>
-        /// ddlMarca control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMarca;
-        
-        /// <summary>
         /// ddlFornecedor control.
         /// </summary>
         /// <remarks>
@@ -49,6 +40,15 @@ namespace Bhopal2 {
         protected global::System.Web.UI.WebControls.DropDownList ddlFornecedor;
         
         /// <summary>
+        /// ddlMarca control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMarca;
+        
+        /// <summary>
         /// ddlModelo control.
         /// </summary>
         /// <remarks>
@@ -56,15 +56,6 @@ namespace Bhopal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlModelo;
-        
-        /// <summary>
-        /// ddlToner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlToner;
         
         /// <summary>
         /// ddlFilial control.

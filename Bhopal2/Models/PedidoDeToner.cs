@@ -11,9 +11,9 @@ namespace Bhopal2.Models
 
         public virtual string NumeroChamado { get; set; }
 
-        public virtual DateTime dataSolicitacao { get; set; }
+        public virtual DateTime DataSolicitacao { get; set; }
 
-        public virtual DateTime dataAlteracao { get; set; }
+        public virtual DateTime DataAlteracao { get; set; }
 
         public virtual string Status { get; set; }
 

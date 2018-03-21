@@ -23,12 +23,16 @@ namespace Bhopal2
             Contato c = new Contato();
             f.Nome = txtFornecedor.Text.ToString();
             c.Nome = txtContato.Text.ToString();
-            c.Telefone = txtTelefone.ToString();
+            c.Telefone = txtTelefone.Text.ToString();
+
+            IList<Contato> contatos = new List<Contato>();
+            contatos.Add(c);
+            f.Contatos = contatos;
 
             FornecedorDAO forn = new FornecedorDAO();
             ContatoDAO contato = new ContatoDAO();
             forn.AdicionaFornecedor(f);
-            contato.AdicionaContato(c);
+            //contato.AdicionaContato(c);
             
             //Response.Write("Cadastro realizado com sucesso");
             Response.Redirect("/CadastroDeFornecedor.aspx");

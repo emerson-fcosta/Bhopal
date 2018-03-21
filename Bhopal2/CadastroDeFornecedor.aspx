@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <h3>Cadastro de fornecedor</h3>
     <div class="form-group">
-        <label for="exampleInputEmail1">Nome Fornecedor</label>
+        <label for="txtFornecedor">Nome Fornecedor</label>
         <asp:TextBox ID="txtFornecedor" class="form-control" placeholder="Informe o nome do Fornecedor" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">
