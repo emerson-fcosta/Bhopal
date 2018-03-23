@@ -23,7 +23,9 @@
         </div>
     </div>
     <div class="row">
-        <asp:GridView ID="GridViewImpressora" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None"></asp:GridView>
+        <div class="col-md-12">
+            <asp:GridView ID="GridViewImpressora" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None"></asp:GridView>
+        </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">

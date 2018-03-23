@@ -14,14 +14,14 @@ namespace Bhopal2.Models
         public virtual string Tipo { get; set; }
 
         public virtual string Nome => $"[{Id}] {Modelo.Nome}  ";
-        
+
         public virtual Fornecedor Fornecedor { get; set; }
 
         public virtual Departamento Departamento { get; set; }
 
         public virtual Modelo Modelo { get; set; }
 
-        //public virtual Marca Marca { get; set; }
+        public virtual Marca Marca => this.Modelo.Marca; //{ get; set; }
 
         public virtual Filial Filial { get; set; }
 

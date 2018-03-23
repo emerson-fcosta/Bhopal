@@ -12,11 +12,13 @@
     <property name="Tipo" length="50" />
     <property name="Codigo" length="10" />
 
-    <!--<many-to-one name="Marca" column="MarcaId" cascade="none" />-->
     <many-to-one name="Modelo" column="ModeloId" cascade="none" />
     <many-to-one name="Fornecedor" column="FornecedorId" cascade="none" />
     <many-to-one name="Filial" column="FilialId" cascade="none" />
+    
     <!--<many-to-one name="Toner" column="TonerId" cascade="none" />-->
+    <!--<many-to-one name="Marca" column="MarcaId" cascade="none" />-->
+    <many-to-one name="Departamento" column="DepartamentoId" cascade="none" />
 
     
     <bag name="PedidosDeToner" lazy="true" cascade="all" >

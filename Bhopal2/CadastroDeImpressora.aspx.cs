@@ -96,8 +96,10 @@ namespace Bhopal2
                 imp.Fornecedor = new FornecedorBusiness().retornaId(long.Parse(ddlFornecedor.SelectedValue));
 
             if (ddlModelo.SelectedValue != "")
+            {
                 imp.Modelo = new ModeloBusiness().retornaId(long.Parse(ddlModelo.SelectedValue));
-
+                //imp.Marca = imp.Modelo.Marca;
+            }
             //if (ddlToner.SelectedValue != "")
             //{
             //    imp.Toner = new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue));
