@@ -26,6 +26,7 @@ namespace Bhopal2
                     ddlImpressora.DataTextField = "Codigo";
                     ddlImpressora.DataSource = impressoras;
                     ddlImpressora.DataBind();
+                    ddlImpressora.Items.Insert(0, "Selecione");
                 }
 
             }

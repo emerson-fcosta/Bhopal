@@ -49,8 +49,7 @@ namespace Bhopal2.DAO
         {
             var session = NHibernateHelper.GetSession();
 
-            IQuery buscaFornecedor = session.CreateQuery($"from Fornecedor f");
-            List<Fornecedor> list = (List<Fornecedor>)buscaFornecedor.List<Fornecedor>();
+            List<Fornecedor> list = session.Query<Fornecedor>().ToList();
             return list;
         }
     }

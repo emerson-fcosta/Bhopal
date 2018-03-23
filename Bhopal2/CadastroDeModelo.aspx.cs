@@ -31,6 +31,7 @@ namespace Bhopal2
                     ddlMarca.DataTextField = "Nome";
                     ddlMarca.DataSource = marcas;
                     ddlMarca.DataBind();
+                    ddlMarca.Items.Insert(0, "Selecione");
                 }
             }
         }

@@ -27,6 +27,7 @@ namespace Bhopal2
                     ddlFilial.DataTextField = "Nome";
                     ddlFilial.DataSource = filiais;
                     ddlFilial.DataBind();
+                    ddlFilial.Items.Insert(0, "Selecione");
                 }
             }
 

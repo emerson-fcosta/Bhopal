@@ -26,6 +26,7 @@ namespace Bhopal2
                     ddlFornecedor.DataTextField = "Nome";
                     ddlFornecedor.DataSource = fornecedores;
                     ddlFornecedor.DataBind();
+                    ddlFornecedor.Items.Insert(0, "Selecione");
                 }
                 //Modelo
                 //var m = new ModeloDAO();
@@ -46,6 +47,7 @@ namespace Bhopal2
                     ddlFilial.DataTextField = "Nome";
                     ddlFilial.DataSource = filiais;
                     ddlFilial.DataBind();
+                    ddlFilial.Items.Insert(0, "Selecione");
                 }
                 //Departamento
                 //var departamento = new DepartamentoDAO();
@@ -66,6 +68,7 @@ namespace Bhopal2
                     ddlMarca.DataTextField = "Nome";
                     ddlMarca.DataSource = marcas;
                     ddlMarca.DataBind();
+                    ddlMarca.Items.Insert(0, "Selecione");
                 }
 
                 //Toner
@@ -148,6 +151,7 @@ namespace Bhopal2
             ddlModelo.DataTextField = "Nome";
             ddlModelo.DataSource = modelos;
             ddlModelo.DataBind();
+            ddlModelo.Items.Insert(0, "Selecione");
         }
 
         protected void ddlToner_SelectedIndexChanged(object sender, EventArgs e)
@@ -166,6 +170,7 @@ namespace Bhopal2
                 ddlDepartamento.DataTextField = "Nome";
                 ddlDepartamento.DataSource = departamentos;
                 ddlDepartamento.DataBind();
+                ddlDepartamento.Items.Insert(0, "Selecione");
             }
         }
 

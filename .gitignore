@@ -21,6 +21,7 @@
 bld/
 [Bb]in/
 [Oo]bj/
+[Aa]pp_Data/*.db
 
 # Visual Studio 2015 cache/options directory
 .vs/
