@@ -168,9 +168,12 @@
     <Content Include="Content\images\sort_desc.png" />
     <Content Include="Content\images\sort_desc_disabled.png" />
     <Content Include="Default.aspx" />
+    <Content Include="Departamentos.aspx" />
     <Content Include="Erro.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Filiais.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Fornecedores.aspx" />
     <Content Include="ImportarArquivo.aspx" />
     <Content Include="Impressoras.aspx" />
     <Content Include="Login.aspx" />
@@ -310,12 +313,33 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Departamentos.aspx.cs">
+      <DependentUpon>Departamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departamentos.aspx.designer.cs">
+      <DependentUpon>Departamentos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Erro.aspx.cs">
       <DependentUpon>Erro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Erro.aspx.designer.cs">
       <DependentUpon>Erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Filiais.aspx.cs">
+      <DependentUpon>Filiais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Filiais.aspx.designer.cs">
+      <DependentUpon>Filiais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecedores.aspx.cs">
+      <DependentUpon>Fornecedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fornecedores.aspx.designer.cs">
+      <DependentUpon>Fornecedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="ImportarArquivo.aspx.cs">
       <DependentUpon>ImportarArquivo.aspx</DependentUpon>
