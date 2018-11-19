@@ -19,7 +19,7 @@ namespace Bhopal2
                 //Carregando dados no DropDownList
                 //Impressora
                 var i = new ImpressoraDAO();
-                var impressoras = i.getAll();
+                var impressoras = i.GetAll();
                 if (impressoras.Count > 0)
                 {
                     ddlImpressora.DataValueField = "Id";
@@ -51,7 +51,7 @@ namespace Bhopal2
             var gravaToner = new TonerDAO();
             gravaToner.AdicionaToner(t);
 
-            Response.Redirect(HttpContext.Current.Request.Url.AbsoluteUri);
+            Response.Redirect("toners.aspx");
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)

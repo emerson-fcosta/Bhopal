@@ -61,7 +61,7 @@ namespace Bhopal2
                 //}
                 //Marca
                 var mc = new MarcaDAO();
-                var marcas = mc.getAll();
+                var marcas = mc.GetAll();
                 if (marcas.Count > 0)
                 {
                     ddlMarca.DataValueField = "Id";
@@ -148,7 +148,7 @@ namespace Bhopal2
         {
             //Modelo
             var m = new ModeloDAO();
-            var modelos = m.getAll().Where(x => x.Marca.Id.ToString() == ddlMarca.SelectedValue).ToList();
+            var modelos = m.GetAll().Where(x => x.Marca.Id.ToString() == ddlMarca.SelectedValue).ToList();
             ddlModelo.DataValueField = "Id";
             ddlModelo.DataTextField = "Nome";
             ddlModelo.DataSource = modelos;

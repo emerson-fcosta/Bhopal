@@ -15,8 +15,8 @@
         <asp:DropDownList ID="ddlMarca" class="form-control" runat="server"></asp:DropDownList>
     </div>
     <div class="form-group">
+        <a href="modelos.aspx" class="btn btn-default" role="button">Voltar</a>
         <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" class="btn btn-primary" />
-        <button type="reset" class="btn btn-default">Reset</button>
     </div>
 </asp:Content>
 

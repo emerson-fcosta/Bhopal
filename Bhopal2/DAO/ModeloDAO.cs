@@ -44,7 +44,7 @@ namespace Bhopal2.DAO
             session.Close();
         }
 
-        public IList<Modelo> getAll()
+        public IList<Modelo> GetAll()
         {
             var session = NHibernateHelper.GetSession();
 
@@ -52,5 +52,13 @@ namespace Bhopal2.DAO
             var list = (List<Modelo>)buscaModelos.List<Modelo>();
             return list;
         }
+
+        public IList<Modelo> ObterTodos()
+        {
+            var session = NHibernateHelper.GetSession();
+
+            return session.Query<Modelo>().ToList();
+        }
+
     }
 }

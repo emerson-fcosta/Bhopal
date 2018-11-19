@@ -9,8 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="content/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="scripts/jquery-3.3.1.js"></script>
 
+    <link href="content/bootstrap.min.css" rel="stylesheet">
+    <script src="scripts/bootstrap.min.js"></script>
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,17 +49,15 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="CadastroDeImpressora.aspx">Impressora</a></li>
-                                <li><a href="CadastroDeModelo.aspx">Modelo</a></li>
-                                <li><a href="CadastroDeToner.aspx">Toner</a></li>
+                                <li><a href="Impressoras.aspx">Impressora</a></li>
+                                <li><a href="Modelos.aspx">Modelos</a></li>
+                                <li><a href="Toners.aspx">Toner</a></li>
                                 <li><a href="CadastroDeDepartamento.aspx">Departamento</a></li>
                                 <li><a href="CadastroDeFilial.aspx">Filial</a></li>
-                                <li><a href="CadastroDeMarca.aspx">Marca</a></li>
+                                <li><a href="Marcas.aspx">Marcas</a></li>
                                 <li><a href="CadastroDeFornecedor.aspx">Fornecedor</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="Login.aspx">Logoff</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Chupa cabra</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -89,18 +91,13 @@
         </nav>
 
         <div class="container-fluid">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server" ClientIDMode="Static">
             </asp:ContentPlaceHolder>
         </div>
     </form>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderScripts" runat="server"></asp:ContentPlaceHolder>
 
-    <asp:ContentPlaceHolder ID="ContentPlaceHolderScripts" runat="server">
-            </asp:ContentPlaceHolder>
 </body>
 </html>

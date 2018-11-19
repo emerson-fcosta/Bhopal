@@ -12,8 +12,8 @@
         <asp:TextBox ID="txtMarca" class="form-control" placeholder="(Ex.: Canon, Ricoh, Brother...)" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">
+        <a href="marcas.aspx" class="btn btn-default" role="button">Voltar</a>
         <asp:Button ID="btnSalvar" class="btn btn-primary" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
-        <button type="reset" class="btn btn-default">Cancelar</button>
     </div>
 </asp:Content>
 

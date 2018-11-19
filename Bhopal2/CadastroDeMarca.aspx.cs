@@ -24,7 +24,7 @@ namespace Bhopal2.scripts
             MarcaDAO gravarMarca = new MarcaDAO();
             gravarMarca.AdicionaMarca(m);
 
-            Response.Redirect("/CadastroDeMarca.aspx");
+            Response.Redirect("marcas.aspx");
         }
     }
 }

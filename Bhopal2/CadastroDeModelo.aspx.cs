@@ -24,7 +24,7 @@ namespace Bhopal2
                 //Carregando os dados no dropdown list
                 //Marca
                 var marcaDAO = new MarcaDAO();
-                var marcas = marcaDAO.getAll();
+                var marcas = marcaDAO.GetAll();
                 if (marcas.Count > 0)
                 {
                     ddlMarca.DataValueField = "Id";
@@ -52,7 +52,7 @@ namespace Bhopal2
             ModeloDAO gravamod = new ModeloDAO();
             gravamod.AdicionaModelo(mod);
 
-            Response.Redirect("CadastroDeModelo.aspx");
+            Response.Redirect("Modelos.aspx");
 
         }
     }

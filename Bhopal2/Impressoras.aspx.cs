@@ -14,13 +14,13 @@ namespace Bhopal2
         {
             if (!IsPostBack)
             {
-                var impressoras = new ImpressoraDAO().getAll();
+                var impressoras = new ImpressoraDAO().GetAll();
                 GridViewImpressora.DataSource = impressoras;
                 GridViewImpressora.DataBind();
 
+                if (impressoras.Count > 0)
+                    GridViewImpressora.HeaderRow.TableSection = TableRowSection.TableHeader;
             }
-            GridViewImpressora.UseAccessibleHeader = true;
-            GridViewImpressora.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
     }
 }

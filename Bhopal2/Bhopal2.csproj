@@ -154,6 +154,19 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Datatables\dataTables.bootstrap.css" />
+    <Content Include="Content\Datatables\dataTables.bootstrap.min.css" />
+    <Content Include="Content\Datatables\dataTables.bootstrap4.css" />
+    <Content Include="Content\Datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\Datatables\jquery.dataTables.css" />
+    <Content Include="Content\Datatables\jquery.dataTables.min.css" />
+    <Content Include="Content\Datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\sort_asc.png" />
+    <Content Include="Content\images\sort_asc_disabled.png" />
+    <Content Include="Content\images\sort_both.png" />
+    <Content Include="Content\images\sort_desc.png" />
+    <Content Include="Content\images\sort_desc_disabled.png" />
     <Content Include="Default.aspx" />
     <Content Include="Erro.aspx" />
     <Content Include="favicon.ico" />
@@ -181,6 +194,8 @@
     <EmbeddedResource Include="Models\Usuario.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Content Include="Marcas.aspx" />
+    <Content Include="Modelos.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -197,16 +212,26 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="manifest.json" />
     <Content Include="bower.json" />
-    <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="PedidoDeToner.aspx" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="CadastroDeFilial.aspx" />
     <Content Include="CadastroDeMarca.aspx" />
-    <Content Include="scripts\jquery-1.9.1.js" />
-    <Content Include="scripts\jquery-1.9.1.min.js" />
-    <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="Content\images\Sorting icons.psd" />
+    <Content Include="scripts\dataTables.bootstrap.js" />
+    <Content Include="scripts\dataTables.bootstrap.min.js" />
+    <Content Include="scripts\dataTables.bootstrap4.js" />
+    <Content Include="scripts\dataTables.bootstrap4.min.js" />
+    <None Include="scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="scripts\jquery-3.3.1.js" />
+    <Content Include="scripts\jquery-3.3.1.min.js" />
+    <Content Include="scripts\jquery-3.3.1.slim.js" />
+    <Content Include="scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="scripts\jquery.dataTables.js" />
+    <Content Include="scripts\jquery.dataTables.min.js" />
     <Content Include="Site.Master" />
+    <Content Include="scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -222,6 +247,7 @@
     </EmbeddedResource>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Toners.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +349,20 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Marcas.aspx.cs">
+      <DependentUpon>Marcas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Marcas.aspx.designer.cs">
+      <DependentUpon>Marcas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos.aspx.cs">
+      <DependentUpon>Modelos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modelos.aspx.designer.cs">
+      <DependentUpon>Modelos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Contato.cs" />
     <Compile Include="Models\Departamento.cs" />
     <Compile Include="Models\Dispositivo.cs" />
@@ -367,6 +407,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Toners.aspx.cs">
+      <DependentUpon>Toners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Toners.aspx.designer.cs">
+      <DependentUpon>Toners.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

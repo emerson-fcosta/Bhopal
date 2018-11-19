@@ -22,8 +22,11 @@
     <div class="form-group">
         <asp:CheckBox ID="CheckBox1" runat="server" Text=" Colorido ?" />
     </div>
-    <asp:Button ID="Button1" runat="server" class="btn btn-primary" OnClick="Button1_Click" Text="Salvar" />
-    <button type="reset" class="btn btn-default">Reset</button>
+    <div class="form-group">
+        <a href="toners.aspx" class="btn btn-default" role="button">Voltar</a>
+        <asp:Button ID="Button1" runat="server" class="btn btn-primary" OnClick="Button1_Click" Text="Salvar" />
+    </div>
+
 
 </asp:Content>
 

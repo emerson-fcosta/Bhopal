@@ -47,8 +47,8 @@
         </asp:DropDownList>
     </div>
     <div class="form-group">
+        <a href="impressoras.aspx" class="btn btn-default" role="button">Voltar</a>
         <asp:Button Text="Cadastrar" runat="server" ID="Button1" OnClick="Button1_Click" class="btn btn-primary" />
-        <button type="reset" class="btn btn-default">Cancelar</button>
     </div>
 </asp:Content>
 

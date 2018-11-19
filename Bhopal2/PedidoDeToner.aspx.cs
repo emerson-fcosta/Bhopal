@@ -38,7 +38,7 @@ namespace Bhopal2
                 }
                 //Marca
                 var mc = new MarcaDAO();
-                var marcas = mc.getAll();
+                var marcas = mc.GetAll();
                 if (marcas.Count > 0)
                 {
                     ddlMarca.DataValueField = "Id";
@@ -49,7 +49,7 @@ namespace Bhopal2
 
                 //Toner
                 var t = new TonerDAO();
-                var toneres = t.getAll();
+                var toneres = t.GetAll();
                 if (toneres.Count > 0)
                 {
                     ddlToner.DataValueField = "Id";
