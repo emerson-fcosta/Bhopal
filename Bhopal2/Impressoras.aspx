@@ -31,7 +31,11 @@
     </div>
 
     <div class="form-group">
-        <asp:GridView ID="GridViewImpressora" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None"></asp:GridView>
+        <asp:GridView ID="GridViewImpressora" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None" OnRowCommand="GridView_RowCommand">
+            <Columns>
+                <asp:CommandField HeaderText="Comandos" ShowDeleteButton="True" ShowEditButton="True" />
+            </Columns>
+        </asp:GridView>
     </div>
 
 </asp:Content>

@@ -19,32 +19,52 @@
         <asp:DropDownList ID="ddlFornecedor" class="form-control" runat="server" OnSelectedIndexChanged="ddlFornecedor_SelectedIndexChanged" ToolTip="Selecione o fornecedor">
         </asp:DropDownList>
     </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <label for="ddlMarca">Marca</label>
+            <asp:DropDownList ID="ddlMarca" class="form-control" runat="server" OnSelectedIndexChanged="ddlMarca_SelectedIndexChanged" ToolTip="Selecione a marca" AutoPostBack="True">
+            </asp:DropDownList>
+
+        </div>
+        <div class="col-xs-6">
+            <label for="ddlModelo">Modelo</label>
+            <asp:DropDownList ID="ddlModelo" class="form-control" runat="server">
+                <asp:ListItem Text="Selecione uma marca" />
+            </asp:DropDownList>
+
+        </div>
+    </div>
+
     <div class="form-group">
-        <label for="ddlMarca">Marca</label>
-        <asp:DropDownList ID="ddlMarca" class="form-control" runat="server" OnSelectedIndexChanged="ddlMarca_SelectedIndexChanged" ToolTip="Selecione a marca" AutoPostBack="True">
-        </asp:DropDownList>
     </div>
     <div class="form-group">
-        <label for="ddlModelo">Modelo</label>
-        <asp:DropDownList ID="ddlModelo" class="form-control" runat="server">
-            <asp:ListItem Text="Selecione uma marca" />
-        </asp:DropDownList>
     </div>
     <%--    <div class="form-group">
         <label for="exempleInputEmail">Toner</label>
         <asp:DropDownList ID="ddlToner" class="form-control" runat="server">
         </asp:DropDownList>
     </div>--%>
+
+    <div class="row">
+        <div class="col-xs-6">
+
+            <label for="exampleInputEmail1">Filial</label>
+            <asp:DropDownList ID="ddlFilial" class="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlFilial_SelectedIndexChanged">
+            </asp:DropDownList>
+        </div>
+        <div class="col-xs-6">
+
+            <label for="exampleInputEmail1">Departamento</label>
+            <asp:DropDownList ID="ddlDepartamento" class="form-control" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
+                <asp:ListItem Text="Selecione uma filial" />
+            </asp:DropDownList>
+        </div>
+    </div>
+
     <div class="form-group">
-        <label for="exampleInputEmail1">Filial</label>
-        <asp:DropDownList ID="ddlFilial" class="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlFilial_SelectedIndexChanged">
-        </asp:DropDownList>
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Departamento</label>
-        <asp:DropDownList ID="ddlDepartamento" class="form-control" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlDepartamento_SelectedIndexChanged">
-            <asp:ListItem Text="Selecione uma filial" />
-        </asp:DropDownList>
     </div>
     <div class="form-group">
         <a href="impressoras.aspx" class="btn btn-default" role="button">Voltar</a>

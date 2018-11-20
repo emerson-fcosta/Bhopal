@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Bhopal2.DAO;
+using Bhopal2.Models;
 
 namespace Bhopal2
 {
@@ -20,6 +21,22 @@ namespace Bhopal2
 
                 if (impressoras.Count > 0)
                     GridViewImpressora.HeaderRow.TableSection = TableRowSection.TableHeader;
+            }
+        }
+
+        protected void GridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            var linha = (int)e.CommandArgument;
+
+            switch (e.CommandName)
+            {
+                case "Edit":
+
+                    break;
+                case "Delete":
+                    break;
+                default:
+                    break;
             }
         }
     }

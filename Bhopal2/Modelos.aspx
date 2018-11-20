@@ -13,7 +13,7 @@
         $(document).ready(function () {
             $('#<%=GridViewModelos.ClientID %>').DataTable({
                 "language": {
-                "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+                    "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
                 }
             });
         });
@@ -40,4 +40,5 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">
+
 </asp:Content>
