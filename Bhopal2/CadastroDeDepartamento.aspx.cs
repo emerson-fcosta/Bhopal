@@ -45,7 +45,7 @@ namespace Bhopal2
             DepartamentoDAO gravardep = new DepartamentoDAO();
             gravardep.AdicionaDepartamento(dep);
 
-            Response.Redirect("CadastroDeDepartamento.aspx");
+            Response.Redirect("Departamentos.aspx");
         }
     }
 }

@@ -8,6 +8,8 @@ namespace Bhopal2.Models
 
         public virtual string Nome { get; set; }
 
+        public virtual string Local => $"{Filial.Nome}";
+
         public virtual Filial Filial { get; set; }
 
         public virtual IList<Impressora> Impressoras { get; set; }

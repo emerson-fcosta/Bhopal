@@ -35,7 +35,7 @@ namespace Bhopal2
             //contato.AdicionaContato(c);
             
             //Response.Write("Cadastro realizado com sucesso");
-            Response.Redirect("/CadastroDeFornecedor.aspx");
+            Response.Redirect("/Fornecedores.aspx");
             
         }
     }

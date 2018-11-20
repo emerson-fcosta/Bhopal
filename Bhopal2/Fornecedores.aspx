@@ -3,8 +3,7 @@
     <title>Fornecedores</title>
 
     <link href="Content/Datatables/jquery.dataTables.min.css" rel="stylesheet" />
-
-
+    
     <script src="scripts/jquery.dataTables.min.js"></script>
     <script src="scripts/dataTables.bootstrap.min.js"></script>
 

@@ -121,7 +121,7 @@ namespace Bhopal2
             var dao = new ImpressoraDAO();
             dao.AdicionaImpressora(imp);
 
-            Response.Redirect("CadastroDeImpressora.aspx");
+            Response.Redirect("Impressoras.aspx");
         }
 
         protected void txtModeloNome_TextChanged(object sender, EventArgs e)

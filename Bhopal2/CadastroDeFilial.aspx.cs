@@ -29,7 +29,7 @@ namespace Bhopal2.scripts
             FilialDAO gravarFilial = new FilialDAO();
             gravarFilial.AdicionaFilial(f);
 
-            Response.Redirect("/CadastroDeFilial.aspx");
+            Response.Redirect("/Filiais.aspx");
 
         }
     }

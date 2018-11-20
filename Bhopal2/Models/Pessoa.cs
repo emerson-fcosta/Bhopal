@@ -24,5 +24,8 @@ namespace Bhopal2.Models
         /// <see cref="Departamento"/> vinculado
         /// </summary>
         public virtual Departamento Departamento { get; set; }
+
+
+        public virtual string LocalDeTrabalho => $"{Departamento.Nome}";
     }
 }
