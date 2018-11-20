@@ -15,8 +15,8 @@
         <asp:DropDownList ID="ddlFilial" class="form-control" runat="server"></asp:DropDownList>
     </div>
     <div class="form-group">
+        <a href="departamentos.aspx" class="btn btn-default" role="button">Voltar</a>
         <asp:Button ID="Button1" runat="server" Text="Salvar" class="btn btn-primary" OnClick="Button1_Click" />
-        <button type="reset" class="btn btn-default">Cancelar</button>
     </div>
 </asp:Content>
 

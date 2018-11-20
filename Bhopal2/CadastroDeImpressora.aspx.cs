@@ -19,7 +19,7 @@ namespace Bhopal2
                 //carregando dados no dropDownList
                 //Fornecedor
                 var f = new FornecedorDAO();
-                var fornecedores = f.getAll();
+                var fornecedores = f.GetAll();
                 if (fornecedores.Count > 0)
                 {
                     ddlFornecedor.DataValueField = "Id";
@@ -40,7 +40,7 @@ namespace Bhopal2
                 //}
                 //Filial
                 var filial = new FilialDAO();
-                var filiais = filial.getAll();
+                var filiais = filial.GetAll();
                 if (filiais.Count > 0)
                 {
                     ddlFilial.DataValueField = "Id";

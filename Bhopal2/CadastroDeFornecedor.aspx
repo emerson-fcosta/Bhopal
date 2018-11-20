@@ -19,8 +19,8 @@
         <asp:TextBox ID="txtTelefone" class="form-control" placeholder="Informe o telefone do fornecedor" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">
+        <a href="fornecedores.aspx" class="btn btn-default" role="button">Voltar</a>
         <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-primary" OnClick="btnSalvar_Click" />
-        <button type="reset" class="btn btn-default">Cancelar</button>
     </div>
 </asp:Content>
 

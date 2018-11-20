@@ -46,7 +46,7 @@ namespace Bhopal2.DAO
             session.Close();
         }
 
-        public IList<Departamento> getAll()
+        public IList<Departamento> GetAll()
         {
             var session = NHibernateHelper.GetSession();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bhopal2.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,17 @@ namespace Bhopal2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                var dao = new FornecedorDAO();
+                var fornecedores = dao.GetAll();
 
+                GridViewFornecedores.DataSource = fornecedores;
+                GridViewFornecedores.DataBind();
+
+                if (fornecedores.Count > 0)
+                    GridViewFornecedores.HeaderRow.TableSection = TableRowSection.TableHeader;
+            }
         }
     }
 }

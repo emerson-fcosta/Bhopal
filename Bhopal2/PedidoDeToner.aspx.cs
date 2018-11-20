@@ -18,7 +18,7 @@ namespace Bhopal2
                 //carrega dados no drop down list
                 //Filial
                 var filial = new FilialDAO();
-                var filiais = filial.getAll();
+                var filiais = filial.GetAll();
                 if (filiais.Count > 0)
                 {
                     ddlFilial.DataValueField = "Id";
@@ -28,7 +28,7 @@ namespace Bhopal2
                 }
                 //Departamento
                 var departamento = new DepartamentoDAO();
-                var departamentos = departamento.getAll();
+                var departamentos = departamento.GetAll();
                 if (departamentos.Count > 0)
                 {
                     //ddlDepartamento.DataValueField = "Id";

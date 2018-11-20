@@ -44,7 +44,7 @@ namespace Bhopal2.DAO
             session.Close();
         }
 
-        internal IList<Filial> getAll()
+        internal IList<Filial> GetAll()
         {
             var session = NHibernateHelper.GetSession();
             IQuery buscaFilial = session.CreateQuery($"from Filial f");

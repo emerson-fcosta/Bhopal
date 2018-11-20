@@ -52,10 +52,10 @@
                                 <li><a href="Impressoras.aspx">Impressora</a></li>
                                 <li><a href="Modelos.aspx">Modelos</a></li>
                                 <li><a href="Toners.aspx">Toner</a></li>
-                                <li><a href="CadastroDeDepartamento.aspx">Departamento</a></li>
-                                <li><a href="CadastroDeFilial.aspx">Filial</a></li>
+                                <li><a href="Departamentos.aspx">Departamentos</a></li>
+                                <li><a href="Filiais.aspx">Filiais</a></li>
                                 <li><a href="Marcas.aspx">Marcas</a></li>
-                                <li><a href="CadastroDeFornecedor.aspx">Fornecedor</a></li>
+                                <li><a href="Fornecedores.aspx">Fornecedores</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="Login.aspx">Logoff</a></li>
                             </ul>
