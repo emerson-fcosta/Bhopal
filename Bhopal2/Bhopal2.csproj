@@ -301,6 +301,7 @@
     <Compile Include="DAO\DepartamentoDAO.cs" />
     <Compile Include="DAO\FilialDAO.cs" />
     <Compile Include="DAO\FornecedorDAO.cs" />
+    <Compile Include="DAO\GenericDAO.cs" />
     <Compile Include="DAO\ImpressoraDAO.cs" />
     <Compile Include="DAO\MarcaDAO.cs" />
     <Compile Include="DAO\ModeloDAO.cs" />
@@ -403,6 +404,7 @@
     <Compile Include="Models\TipoImpressoraEnum.cs" />
     <Compile Include="Models\Toner.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="NHibernateSessionManager.cs" />
     <Compile Include="PedidoDeToner.aspx.cs">
       <DependentUpon>PedidoDeToner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -441,6 +443,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>

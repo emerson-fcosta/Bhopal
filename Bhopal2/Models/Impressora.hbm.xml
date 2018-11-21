@@ -18,7 +18,7 @@
     
     <!--<many-to-one name="Toner" column="TonerId" cascade="none" />-->
     <!--<many-to-one name="Marca" column="MarcaId" cascade="none" />-->
-    <many-to-one name="Departamento" column="DepartamentoId" cascade="none" />
+    <many-to-one name="Departamento" column="DepartamentoId" cascade="none"/>
 
     
     <bag name="PedidosDeToner" lazy="true" cascade="all" >

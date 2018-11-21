@@ -8,58 +8,36 @@ using System.Linq;
 
 namespace Bhopal2.DAO
 {
-    public class DepartamentoDAO
+    public class DepartamentoDAO : GenericDAO
     {
 
        public void AdicionaDepartamento(Departamento departamento)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(departamento);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Save(departamento);
         }
 
 
         public void RemoveDepartamento(Departamento departamento)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Delete(departamento);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Delete(departamento);
         }
 
 
         public void AtualizaDepartamento(Departamento departamento)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(departamento);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Update(departamento);
         }
 
         public IList<Departamento> GetAll()
-        {
-            var session = NHibernateHelper.GetSession();
-
-            IQuery buscaDepartamento = session.CreateQuery($"from Departamento d");
+        {            
+            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento d");
             var list = (List<Departamento>)buscaDepartamento.List<Departamento>();
             return list;
         }
 
         public IList<Departamento> getByFilial(Filial f)
         {
-
-            var session = NHibernateHelper.GetSession();
-            IQuery buscaDepartamento = session.CreateQuery($"from Departamento d where d.Filial = {f.Id}");
+            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento d where d.Filial = {f.Id}");
             var list = buscaDepartamento.List<Departamento>().ToList();
             return list;
 
@@ -67,8 +45,7 @@ namespace Bhopal2.DAO
 
         internal Departamento getById(string id)
         {
-            var session = NHibernateHelper.GetSession();
-            IQuery buscaDepartamento = session.CreateQuery($"from Departamento d where d.Id = {id}");
+            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento d where d.Id = {id}");
             var list = buscaDepartamento.List<Departamento>().FirstOrDefault();
             return list;
         }

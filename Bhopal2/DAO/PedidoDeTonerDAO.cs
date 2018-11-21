@@ -7,40 +7,22 @@ using System.Web;
 
 namespace Bhopal2.DAO
 {
-    public class PedidoDeTonerDAO
+    public class PedidoDeTonerDAO : GenericDAO
     {
 
         public void AdicionaPedido(PedidoDeToner pedido)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(pedido);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Save(pedido);
         }
 
         public void RemovePedido(PedidoDeToner pedido)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Delete(pedido);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Delete(pedido);
         }
 
         public void AtualizaPedido(PedidoDeToner pedido)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(pedido);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Update(pedido);
         }
     }
 }

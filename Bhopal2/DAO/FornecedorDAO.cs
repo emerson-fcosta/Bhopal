@@ -8,48 +8,28 @@ using NHibernate;
 
 namespace Bhopal2.DAO
 {
-    public class FornecedorDAO
+
+    public class FornecedorDAO : GenericDAO
     {
 
         public void AdicionaFornecedor(Fornecedor fornecedor)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(fornecedor);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Save(fornecedor);
         }
-
-
+        
         public void RemoveFornecedor(Fornecedor fornecedor)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Delete(fornecedor);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Delete(fornecedor);
         }
 
         public void AtualizaFornecedor(Fornecedor fornecedor)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(fornecedor);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Update(fornecedor);
         }
 
         public IList<Fornecedor> GetAll()
         {
-            var session = NHibernateHelper.GetSession();
-
-            List<Fornecedor> list = session.Query<Fornecedor>().ToList();
+            List<Fornecedor> list = Session.Query<Fornecedor>().ToList();
             return list;
         }
     }

@@ -8,54 +8,33 @@ using NHibernate;
 
 namespace Bhopal2.DAO
 {
-    public class FilialDAO
+    public class FilialDAO : GenericDAO
     {
         internal void AdicionaFilial(Filial filial)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(filial);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Save(filial);
         }
 
         internal void RemoveFilial(Filial filial)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Delete(filial);
-            session.Transaction.Commit();
-
-            session.Close();
-
+            Session.Delete(filial);
         }
 
         internal void AtualizaFilial(Filial filial)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(filial);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Update(filial);
         }
 
         internal IList<Filial> GetAll()
-        {
-            var session = NHibernateHelper.GetSession();
-            IQuery buscaFilial = session.CreateQuery($"from Filial f");
+        {            
+            IQuery buscaFilial = Session.CreateQuery($"from Filial f");
             var list = (List<Filial>)buscaFilial.List<Filial>();
             return list;
         }
 
-        internal Filial getById(string id)
+        internal Filial GetById(string id)
         {
-            var session = NHibernateHelper.GetSession();
-            IQuery buscaFilial = session.CreateQuery($"from Filial f where f.Id = {id}");
+            IQuery buscaFilial = Session.CreateQuery($"from Filial f where f.Id = {id}");
             var list = buscaFilial.List<Filial>().FirstOrDefault();
             return list;
         }

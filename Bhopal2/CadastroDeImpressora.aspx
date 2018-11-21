@@ -6,6 +6,12 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <h3>Cadastro de impressora</h3>
+
+    <div class="form-group">
+        <label for="txtId" hidden></label>
+        <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server"  type="hidden" />  
+    </div>
+
     <div class="form-group">
         <label for="txtTipo">Tipo</label>
         <asp:TextBox ID="txtTipo" class="form-control" placeholder="Digite tipo de impressora" runat="server" OnTextChanged="txtModeloNome_TextChanged"></asp:TextBox>

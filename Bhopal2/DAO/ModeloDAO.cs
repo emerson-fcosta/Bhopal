@@ -8,56 +8,35 @@ using NHibernate;
 
 namespace Bhopal2.DAO
 {
-    public class ModeloDAO
+
+    public class ModeloDAO : GenericDAO
     {
 
         public void AdicionaModelo(Modelo modelo)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(modelo);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Save(modelo);
         }
 
         public void RemoveModelo(Modelo modelo)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Delete(modelo);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Delete(modelo);
         }
 
         public void AtualizaModelo(Modelo modelo)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(modelo);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Update(modelo);
         }
 
         public IList<Modelo> GetAll()
         {
-            var session = NHibernateHelper.GetSession();
-
-            IQuery buscaModelos = session.CreateQuery($"from Modelo mod");
+            IQuery buscaModelos = Session.CreateQuery($"from Modelo mod");
             var list = (List<Modelo>)buscaModelos.List<Modelo>();
             return list;
         }
 
         public IList<Modelo> ObterTodos()
         {
-            var session = NHibernateHelper.GetSession();
-
-            return session.Query<Modelo>().ToList();
+            return Session.Query<Modelo>().ToList();
         }
 
     }

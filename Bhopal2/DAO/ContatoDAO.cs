@@ -1,5 +1,6 @@
 ﻿using Bhopal2.Infra;
 using Bhopal2.Models;
+using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,44 +8,23 @@ using System.Web;
 
 namespace Bhopal2.DAO
 {
-    public class ContatoDAO
+    public class ContatoDAO : GenericDAO
     {
-
+        
         public void AdicionaContato(Contato contato)
         {
-
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(contato);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Save(contato);
         }
 
 
         public void RemoveContato(Contato contato)
         {
-
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Delete(contato);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Delete(contato);
         }
 
         public void AtualizaContato(Contato contato)
         {
-
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(contato);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Update(contato);
         }
     }
 }

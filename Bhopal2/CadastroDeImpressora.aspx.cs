@@ -12,78 +12,113 @@ namespace Bhopal2
 {
     public partial class CadastroDeImpressora : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                //carregando dados no dropDownList
-                //Fornecedor
-                var f = new FornecedorDAO();
-                var fornecedores = f.GetAll();
-                if (fornecedores.Count > 0)
+
+                var param = Request.QueryString["Id"];
+                if (param != null)
                 {
-                    ddlFornecedor.DataValueField = "Id";
-                    ddlFornecedor.DataTextField = "Nome";
-                    ddlFornecedor.DataSource = fornecedores;
-                    ddlFornecedor.DataBind();
-                    ddlFornecedor.Items.Insert(0, "Selecione");
-                }
-                //Modelo
-                //var m = new ModeloDAO();
-                //var modelos = m.getAll();
-                //if (modelos.Count > 0)
-                //{
-                //    ddlModelo.DataValueField = "Id";
-                //    ddlModelo.DataTextField = "Nome";
-                //    ddlModelo.DataSource = modelos;
-                //    ddlModelo.DataBind();
-                //}
-                //Filial
-                var filial = new FilialDAO();
-                var filiais = filial.GetAll();
-                if (filiais.Count > 0)
-                {
-                    ddlFilial.DataValueField = "Id";
-                    ddlFilial.DataTextField = "Nome";
-                    ddlFilial.DataSource = filiais;
-                    ddlFilial.DataBind();
-                    ddlFilial.Items.Insert(0, "Selecione");
-                }
-                //Departamento
-                //var departamento = new DepartamentoDAO();
-                //var departamentos = departamento.getAll();
-                //if (departamentos.Count > 0)
-                //{
-                //    ddlDepartamento.DataValueField = "Id";
-                //    ddlDepartamento.DataTextField = "Nome";
-                //    ddlDepartamento.DataSource = departamentos;
-                //    ddlDepartamento.DataBind();
-                //}
-                //Marca
-                var mc = new MarcaDAO();
-                var marcas = mc.GetAll();
-                if (marcas.Count > 0)
-                {
-                    ddlMarca.DataValueField = "Id";
-                    ddlMarca.DataTextField = "Nome";
-                    ddlMarca.DataSource = marcas;
-                    ddlMarca.DataBind();
-                    ddlMarca.Items.Insert(0, "Selecione");
+                    long id;
+                    var i = long.TryParse(param, out id);
+                    if (i)
+                    {
+                        AtualizaFormulario(id);
+                    }
                 }
 
-                //Toner
-                //var t = new TonerDAO();
-                //var toneres = t.getAll();
-                //if (toneres.Count > 0)
-                //{
-                //    ddlToner.DataValueField = "Id";
-                //    ddlToner.DataTextField = "Codigo";
-                //    ddlToner.DataSource = toneres;
-                //    ddlToner.DataBind();
-                //}
-
+                CarregarDropDown();
             }
         }
+
+        private void CarregarDropDown()
+        {
+            //carregando dados no dropDownList
+            //Fornecedor
+            var f = new FornecedorDAO();
+            var fornecedores = f.GetAll();
+            if (fornecedores.Count > 0)
+            {
+                ddlFornecedor.DataValueField = "Id";
+                ddlFornecedor.DataTextField = "Nome";
+                ddlFornecedor.DataSource = fornecedores;
+                ddlFornecedor.DataBind();
+                ddlFornecedor.Items.Insert(0, "Selecione");
+            }
+            //Modelo
+            //var m = new ModeloDAO();
+            //var modelos = m.getAll();
+            //if (modelos.Count > 0)
+            //{
+            //    ddlModelo.DataValueField = "Id";
+            //    ddlModelo.DataTextField = "Nome";
+            //    ddlModelo.DataSource = modelos;
+            //    ddlModelo.DataBind();
+            //}
+            //Filial
+            var filial = new FilialDAO();
+            var filiais = filial.GetAll();
+            if (filiais.Count > 0)
+            {
+                ddlFilial.DataValueField = "Id";
+                ddlFilial.DataTextField = "Nome";
+                ddlFilial.DataSource = filiais;
+                ddlFilial.DataBind();
+                ddlFilial.Items.Insert(0, "Selecione");
+            }
+            //Departamento
+            //var departamento = new DepartamentoDAO();
+            //var departamentos = departamento.getAll();
+            //if (departamentos.Count > 0)
+            //{
+            //    ddlDepartamento.DataValueField = "Id";
+            //    ddlDepartamento.DataTextField = "Nome";
+            //    ddlDepartamento.DataSource = departamentos;
+            //    ddlDepartamento.DataBind();
+            //}
+            //Marca
+            var mc = new MarcaDAO();
+            var marcas = mc.GetAll();
+            if (marcas.Count > 0)
+            {
+                ddlMarca.DataValueField = "Id";
+                ddlMarca.DataTextField = "Nome";
+                ddlMarca.DataSource = marcas;
+                ddlMarca.DataBind();
+                ddlMarca.Items.Insert(0, "Selecione");
+            }
+
+            //Toner
+            //var t = new TonerDAO();
+            //var toneres = t.getAll();
+            //if (toneres.Count > 0)
+            //{
+            //    ddlToner.DataValueField = "Id";
+            //    ddlToner.DataTextField = "Codigo";
+            //    ddlToner.DataSource = toneres;
+            //    ddlToner.DataBind();
+            //}
+        }
+
+        void AtualizaFormulario(long Id)
+        {
+            var i = new ImpressoraDAO().getById(Id.ToString());
+
+            txtId.Text = i.Id.ToString();
+            txtTipo.Text = i.Tipo;
+            txtCodigoImpressora.Text = i.Codigo;
+            ddlFornecedor.SelectedIndex = (int)i.Fornecedor.Id;
+            ddlMarca.SelectedIndex = (int)i.Marca.Id;
+            //ddlMarca_SelectedIndexChanged(this, null);
+
+            ddlModelo.SelectedIndex = (int)i.Modelo.Id;
+            ddlFilial.SelectedIndex = (int)i.Filial.Id;
+            ddlDepartamento.SelectedIndex = (int)i.Departamento.Id;
+
+        }
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -123,6 +158,7 @@ namespace Bhopal2
 
             Response.Redirect("Impressoras.aspx");
         }
+
 
         protected void txtModeloNome_TextChanged(object sender, EventArgs e)
         {
@@ -165,7 +201,7 @@ namespace Bhopal2
         {
             //Departamento
             var d = new DepartamentoDAO();
-            var departamentos = d.getByFilial(new FilialDAO().getById(ddlFilial.SelectedValue));
+            var departamentos = d.getByFilial(new FilialDAO().GetById(ddlFilial.SelectedValue));
             if (departamentos.Count > 0)
             {
                 ddlDepartamento.DataValueField = "Id";

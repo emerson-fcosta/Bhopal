@@ -9,68 +9,47 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace Bhopal2.DAO
 {
-    public class ImpressoraDAO
+    public class ImpressoraDAO : GenericDAO
     {
-
-
 
         public void AdicionaImpressora(Impressora impressora)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(impressora);
-            session.Transaction.Commit();
-
-            //session.Flush();
-            session.Close();
-
+            Session.Save(impressora);
         }
 
         internal IList<Impressora> GetAll()
         {
-            var session = NHibernateHelper.GetSession();
-            IQuery buscaImpressora = session.CreateQuery($"from Impressora i");
+            IQuery buscaImpressora = Session.CreateQuery($"from Impressora i");
             var list = buscaImpressora.List<Impressora>().ToList();
             return list;
         }
 
         public void RemoveImpressora(Impressora impressora)
         {
-            var session = NHibernateHelper.GetSession();
+            Session.Delete(impressora);
+        }
 
-            session.BeginTransaction();
-            session.Delete(impressora);
-            session.Transaction.Commit();
-
-            session.Close();
-            
+        public void RemoveImpressora(long id)
+        {
+            RemoveImpressora(getById(id.ToString()));
         }
 
         public void AtualizaImpressora(Impressora impressora)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(impressora);
-            session.Transaction.Commit();
-
-            session.Close();
-
+            Session.Update(impressora);
         }
 
         internal Impressora getById(string id)
         {
-            var session = NHibernateHelper.GetSession();
-            IQuery buscaImpressora = session.CreateQuery($"from Impressora i where i.Id = {id}");
+            IQuery buscaImpressora = Session.CreateQuery($"from Impressora i where i.Id = {id}");
             var list = buscaImpressora.List<Impressora>().FirstOrDefault();
             return list;
+
         }
 
         public IList<Impressora> getByDepartamento(Departamento d)
         {
-            var session = NHibernateHelper.GetSession();
-            IQuery buscaImpressora = session.CreateQuery($"from Impressora i where i.Id = {d.Id}");
+            IQuery buscaImpressora = Session.CreateQuery($"from Impressora i where i.Id = {d.Id}");
             var list = buscaImpressora.List<Impressora>().ToList();
             return list;
         }

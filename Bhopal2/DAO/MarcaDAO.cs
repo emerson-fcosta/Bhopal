@@ -8,47 +8,28 @@ using System.Web;
 
 namespace Bhopal2.DAO
 {
-    public class MarcaDAO
+
+    public class MarcaDAO : GenericDAO
     {
 
         public void AdicionaMarca(Marca marca)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Save(marca);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Save(marca);
         }
 
         public void RemoveMarca(Marca marca)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Delete(marca);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Delete(marca);
         }
 
         public void AtualizaMarca(Marca marca)
         {
-            var session = NHibernateHelper.GetSession();
-
-            session.BeginTransaction();
-            session.Update(marca);
-            session.Transaction.Commit();
-
-            session.Close();
+            Session.Update(marca);
         }
 
         public IList<Marca> GetAll()
         {
-            var session = NHibernateHelper.GetSession();
-
-            IQuery buscaMarcas = session.CreateQuery($"from Marca m");
+            IQuery buscaMarcas = Session.CreateQuery($"from Marca m");
             var list = (List<Marca>)buscaMarcas.List<Marca>();
             return list;
         }
