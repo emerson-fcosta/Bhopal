@@ -17,6 +17,7 @@ namespace Bhopal2
         {
             if (!Page.IsPostBack)
             {
+                CarregarDropDown();
 
                 var param = Request.QueryString["Id"];
                 if (param != null)
@@ -29,7 +30,6 @@ namespace Bhopal2
                     }
                 }
 
-                CarregarDropDown();
             }
         }
 
@@ -109,13 +109,15 @@ namespace Bhopal2
             txtId.Text = i.Id.ToString();
             txtTipo.Text = i.Tipo;
             txtCodigoImpressora.Text = i.Codigo;
-            ddlFornecedor.SelectedIndex = (int)i.Fornecedor.Id;
-            ddlMarca.SelectedIndex = (int)i.Marca.Id;
-            //ddlMarca_SelectedIndexChanged(this, null);
+            ddlFornecedor.SelectedValue = i.Fornecedor.Id.ToString();
 
-            ddlModelo.SelectedIndex = (int)i.Modelo.Id;
-            ddlFilial.SelectedIndex = (int)i.Filial.Id;
-            ddlDepartamento.SelectedIndex = (int)i.Departamento.Id;
+            ddlMarca.SelectedValue = i.Marca.Id.ToString();
+            ddlMarca_SelectedIndexChanged(this, EventArgs.Empty);
+            ddlModelo.SelectedValue = i.Modelo.Id.ToString();
+
+            ddlFilial.SelectedValue = i.Filial.Id.ToString();
+            ddlFilial_SelectedIndexChanged(this, EventArgs.Empty);
+            ddlDepartamento.SelectedValue = i.Departamento.Id.ToString();
 
         }
 

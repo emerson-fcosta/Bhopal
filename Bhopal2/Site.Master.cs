@@ -13,7 +13,7 @@ namespace Bhopal2
         {
             if (!Context.User.IsInRole("TI"))
             {
-                Response.Redirect("/Erro.aspx");
+                //Response.Redirect("/Erro.aspx");
 
             }
         }
