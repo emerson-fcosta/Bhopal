@@ -109,30 +109,55 @@ namespace Bhopal2
             txtId.Text = i.Id.ToString();
             txtTipo.Text = i.Tipo;
             txtCodigoImpressora.Text = i.Codigo;
-            ddlFornecedor.SelectedValue = i.Fornecedor.Id.ToString();
 
-            ddlMarca.SelectedValue = i.Marca.Id.ToString();
-            ddlMarca_SelectedIndexChanged(this, EventArgs.Empty);
-            ddlModelo.SelectedValue = i.Modelo.Id.ToString();
+            if (i.Fornecedor != null)
+            {
+                ddlFornecedor.SelectedValue = i.Fornecedor.Id.ToString();
+            }
 
-            ddlFilial.SelectedValue = i.Filial.Id.ToString();
-            ddlFilial_SelectedIndexChanged(this, EventArgs.Empty);
-            ddlDepartamento.SelectedValue = i.Departamento.Id.ToString();
+            if (i.Marca != null)
+            {
+                ddlMarca.SelectedValue = i.Marca.Id.ToString();
+                ddlMarca_SelectedIndexChanged(this, EventArgs.Empty);
+            }
+
+            if (i.Modelo != null)
+            {
+                ddlModelo.SelectedValue = i.Modelo.Id.ToString();
+            }
+
+            if (i.Filial != null)
+            {
+                ddlFilial.SelectedValue = i.Filial.Id.ToString();
+                ddlFilial_SelectedIndexChanged(this, EventArgs.Empty);
+            }
+
+            if (i.Departamento != null)
+            {
+                ddlDepartamento.SelectedValue = i.Departamento.Id.ToString();
+            }
 
         }
 
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //salvando os dados do cadastro de impressora
             Impressora imp = new Impressora();
+            var dao = new ImpressoraDAO();
+
+            //salvando os dados do cadastro de impressora
+            if (txtId.Text != string.Empty)
+            {
+                imp = dao.getById(txtId.Text);
+            }
+
             imp.Tipo = txtTipo.Text.ToString();
             imp.Codigo = txtCodigoImpressora.Text.ToString();
 
             if (ddlFornecedor.SelectedValue != "")
                 imp.Fornecedor = new FornecedorBusiness().retornaId(long.Parse(ddlFornecedor.SelectedValue));
 
-            if (ddlModelo.SelectedValue != "")
+            if (ddlModelo.SelectedIndex > 0)
             {
                 imp.Modelo = new ModeloBusiness().retornaId(long.Parse(ddlModelo.SelectedValue));
                 //imp.Marca = imp.Modelo.Marca;
@@ -145,17 +170,16 @@ namespace Bhopal2
             //if (ddlMarca.SelectedValue != "")
             //    imp.Marca = new MarcaBusiness().retornaId(long.Parse(ddlMarca.SelectedValue));
 
-            if (ddlFilial.SelectedValue != "")
+            if (ddlFilial.SelectedIndex > 0)
             {
                 imp.Filial = new FilialBusiness().retornaId(long.Parse(ddlFilial.SelectedValue));
             }
 
-            if (ddlDepartamento.SelectedValue != "")
+            if (ddlDepartamento.SelectedIndex > 0)
             {
                 imp.Departamento = new DepartamentoBusiness().retornaId(long.Parse(ddlDepartamento.SelectedValue));
             }
 
-            var dao = new ImpressoraDAO();
             dao.AdicionaImpressora(imp);
 
             Response.Redirect("Impressoras.aspx");

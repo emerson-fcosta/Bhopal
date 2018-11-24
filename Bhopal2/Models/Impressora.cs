@@ -13,7 +13,7 @@ namespace Bhopal2.Models
 
         public virtual string Tipo { get; set; }
 
-        public virtual string Nome => $"[{Id}] {Modelo.Nome}  ";
+        public virtual string Nome => (Modelo != null) ? $"{Modelo.Nome}" : "";
 
         public virtual Fornecedor Fornecedor { get; set; }
 
@@ -21,7 +21,7 @@ namespace Bhopal2.Models
 
         public virtual Modelo Modelo { get; set; }
 
-        public virtual Marca Marca => this.Modelo.Marca; //{ get; set; }
+        public virtual Marca Marca => (Modelo != null && Modelo.Marca != null) ? this.Modelo.Marca: null;
 
         public virtual Filial Filial { get; set; }
 
