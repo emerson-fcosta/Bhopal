@@ -27,11 +27,15 @@
 
     <div class="form-group">
         <a href="cadastrodemodelo.aspx" class="btn btn-primary" role="button">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Incluir</a>
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Incluir</a>
     </div>
 
     <div class="form-group">
-        <asp:GridView ID="GridViewModelos" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None"></asp:GridView>
+        <asp:GridView ID="GridViewModelos" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None">
+            <Columns>
+                <asp:CommandField HeaderText="Comandos" ShowDeleteButton="True" ShowEditButton="True" />
+            </Columns>
+        </asp:GridView>
     </div>
 
     <div class="form-group">
@@ -40,5 +44,4 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">
-
 </asp:Content>

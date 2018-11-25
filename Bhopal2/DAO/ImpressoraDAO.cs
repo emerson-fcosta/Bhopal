@@ -24,14 +24,14 @@ namespace Bhopal2.DAO
             return list;
         }
 
-        public void RemoveImpressora(Impressora impressora)
+        public void Deletar(Impressora impressora)
         {
             Session.Delete(impressora);
         }
 
-        public void RemoveImpressora(long id)
+        public void Deletar(long id)
         {
-            RemoveImpressora(getById(id.ToString()));
+            Deletar(getById(id.ToString()));
         }
 
         public void AtualizaImpressora(Impressora impressora)

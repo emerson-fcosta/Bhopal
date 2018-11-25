@@ -30,7 +30,11 @@
     </div>
 
     <div class="form-group">
-        <asp:GridView ID="GridViewToners" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None"></asp:GridView>
+        <asp:GridView ID="GridViewToners" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None">
+            <Columns>
+                <asp:CommandField HeaderText="Comandos" ShowDeleteButton="True" ShowEditButton="True" />
+            </Columns>
+        </asp:GridView>
     </div>
 
     <div class="form-group">

@@ -136,7 +136,6 @@ namespace Bhopal2
             {
                 ddlDepartamento.SelectedValue = i.Departamento.Id.ToString();
             }
-
         }
 
 
@@ -162,6 +161,7 @@ namespace Bhopal2
                 imp.Modelo = new ModeloBusiness().retornaId(long.Parse(ddlModelo.SelectedValue));
                 //imp.Marca = imp.Modelo.Marca;
             }
+
             //if (ddlToner.SelectedValue != "")
             //{
             //    imp.Toner = new TonerBusiness().retornaId(long.Parse(ddlToner.SelectedValue));

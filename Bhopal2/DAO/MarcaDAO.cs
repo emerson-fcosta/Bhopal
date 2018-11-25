@@ -17,9 +17,21 @@ namespace Bhopal2.DAO
             Session.Save(marca);
         }
 
-        public void RemoveMarca(Marca marca)
+        public void Deletar(Marca marca)
         {
             Session.Delete(marca);
+        }
+
+        public void Deletar(long id)
+        {
+            Deletar(ObterPeloId(id));
+        }
+
+        private Marca ObterPeloId(long v)
+        {
+            return Session.Query<Marca>()
+                    .Where(x => x.Id == v)
+                    .FirstOrDefault();
         }
 
         public void AtualizaMarca(Marca marca)

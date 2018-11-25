@@ -23,6 +23,12 @@ namespace Bhopal2
             if (lista != null)
                 GridViewImpressora.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
+        private void BindGridView()
+        {
+            lista = new ImpressoraDAO().GetAll();
+            GridViewImpressora.DataSource = lista;
+            GridViewImpressora.DataBind();
+        }
 
         protected void GridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -52,14 +58,8 @@ namespace Bhopal2
 
         private void DeletarRegistro(long id)
         {
-            new ImpressoraDAO().RemoveImpressora(id);
+            new ImpressoraDAO().Deletar(id);
         }
 
-        private void BindGridView()
-        {
-            lista = new ImpressoraDAO().GetAll();
-            GridViewImpressora.DataSource = lista;
-            GridViewImpressora.DataBind();
-        }
     }
 }
