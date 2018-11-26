@@ -21,18 +21,47 @@ namespace Bhopal2
         {
             if (!Page.IsPostBack)
             {
-                //Carregando os dados no dropdown list
-                //Marca
-                var marcaDAO = new MarcaDAO();
-                var marcas = marcaDAO.GetAll();
-                if (marcas.Count > 0)
+                CarregarDropDown();
+
+                var param = Request.QueryString["Id"];
+                if (param != null)
                 {
-                    ddlMarca.DataValueField = "Id";
-                    ddlMarca.DataTextField = "Nome";
-                    ddlMarca.DataSource = marcas;
-                    ddlMarca.DataBind();
-                    ddlMarca.Items.Insert(0, "Selecione");
+                    long id;
+                    var i = long.TryParse(param, out id);
+                    if (i)
+                    {
+                        AtualizaFormulario(id);
+                    }
                 }
+            }
+        }
+
+        private void CarregarDropDown()
+        {
+            //Carregando os dados no dropdown list
+            //Marca
+            var marcaDAO = new MarcaDAO();
+            var marcas = marcaDAO.GetAll();
+            if (marcas.Count > 0)
+            {
+                ddlMarca.DataValueField = "Id";
+                ddlMarca.DataTextField = "Nome";
+                ddlMarca.DataSource = marcas;
+                ddlMarca.DataBind();
+                ddlMarca.Items.Insert(0, "Selecione");
+            }
+        }
+
+        void AtualizaFormulario(long Id)
+        {
+            var i = new ModeloDAO().ObterPeloId(Id);
+
+            txtId.Text = i.Id.ToString();
+            txtModeloNome.Text = i.Nome;
+
+            if (i.Marca != null)
+            {
+                ddlMarca.SelectedValue = i.Marca.Id.ToString();
             }
         }
 
@@ -44,13 +73,20 @@ namespace Bhopal2
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             Modelo mod = new Modelo();
+            var dao = new ModeloDAO();
+
+            //salvando os dados do cadastro de impressora
+            if (txtId.Text != string.Empty)
+            {
+                mod= dao.ObterPeloId(long.Parse(txtId.Text));
+            }
+
             mod.Nome = txtModeloNome.Text.ToString();
 
             if (ddlMarca.SelectedValue != "")
                 mod.Marca = new MarcaBusiness().retornaId(long.Parse(ddlMarca.SelectedValue));
 
-            ModeloDAO gravamod = new ModeloDAO();
-            gravamod.AdicionaModelo(mod);
+            dao.AdicionaModelo(mod);
 
             Response.Redirect("Modelos.aspx");
 

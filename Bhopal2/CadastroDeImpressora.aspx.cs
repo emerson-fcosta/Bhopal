@@ -29,7 +29,6 @@ namespace Bhopal2
                         AtualizaFormulario(id);
                     }
                 }
-
             }
         }
 
@@ -210,7 +209,7 @@ namespace Bhopal2
         {
             //Modelo
             var m = new ModeloDAO();
-            var modelos = m.GetAll().Where(x => x.Marca.Id.ToString() == ddlMarca.SelectedValue).ToList();
+            var modelos = m.ObterTodos().Where(x => x.Marca.Id.ToString() == ddlMarca.SelectedValue).ToList();
             ddlModelo.DataValueField = "Id";
             ddlModelo.DataTextField = "Nome";
             ddlModelo.DataSource = modelos;

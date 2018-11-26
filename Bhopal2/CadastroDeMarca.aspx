@@ -8,6 +8,10 @@
 
     <h3>Cadastro de Marca</h3>
     <div class="form-group">
+        <label for="txtId" hidden></label>
+        <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server"  type="hidden" />  
+    </div>
+    <div class="form-group">
         <label for="exampleInputEmail1">Marca</label>
         <asp:TextBox ID="txtMarca" class="form-control" placeholder="(Ex.: Canon, Ricoh, Brother...)" runat="server"></asp:TextBox>
     </div>

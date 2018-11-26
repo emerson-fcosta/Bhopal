@@ -27,7 +27,7 @@ namespace Bhopal2.DAO
             Deletar(ObterPeloId(id));
         }
 
-        private Marca ObterPeloId(long v)
+        internal Marca ObterPeloId(long v)
         {
             return Session.Query<Marca>()
                     .Where(x => x.Id == v)
@@ -45,5 +45,6 @@ namespace Bhopal2.DAO
             var list = (List<Marca>)buscaMarcas.List<Marca>();
             return list;
         }
+
     }
 }

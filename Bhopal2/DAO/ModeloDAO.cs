@@ -17,7 +17,7 @@ namespace Bhopal2.DAO
             Session.Save(modelo);
         }
 
-        public void RemoveModelo(Modelo modelo)
+        public void Deletar(Modelo modelo)
         {
             Session.Delete(modelo);
         }
@@ -27,17 +27,23 @@ namespace Bhopal2.DAO
             Session.Update(modelo);
         }
 
-        public IList<Modelo> GetAll()
+        public IList<Modelo> ObterTodos()
         {
             IQuery buscaModelos = Session.CreateQuery($"from Modelo mod");
             var list = (List<Modelo>)buscaModelos.List<Modelo>();
             return list;
         }
 
-        public IList<Modelo> ObterTodos()
+        internal void Deletar(long id)
         {
-            return Session.Query<Modelo>().ToList();
+            Deletar(ObterPeloId(id));
         }
 
+        internal Modelo ObterPeloId(long id)
+        {
+            return Session.Query<Modelo>()
+                    .Where(x => x.Id == id)
+                    .FirstOrDefault();
+        }
     }
 }

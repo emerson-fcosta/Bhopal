@@ -7,6 +7,10 @@
 
     <h3>Cadastro de toner</h3>
     <div class="form-group">
+        <label for="txtId" hidden></label>
+        <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server"  type="hidden" />  
+    </div>
+    <div class="form-group">
         <label for="exampleInputEmail1">Cor</label>
         <asp:TextBox ID="TextBox1" type="text" runat="server" class="form-control" placeholder="Digite a cor" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
     </div>

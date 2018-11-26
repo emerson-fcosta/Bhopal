@@ -26,10 +26,10 @@ namespace Bhopal2.DAO
         }
 
         internal IList<Filial> GetAll()
-        {            
-            IQuery buscaFilial = Session.CreateQuery($"from Filial f");
-            var list = (List<Filial>)buscaFilial.List<Filial>();
-            return list;
+        {
+            return Session.Query<Filial>().ToList();
+            //var list = (List<Filial>)buscaFilial.List<Filial>();
+            //return list;
         }
 
         internal Filial GetById(string id)

@@ -7,6 +7,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
     <h3>Cadastro de fornecedor</h3>
     <div class="form-group">
+        <label for="txtId" hidden></label>
+        <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server"  type="hidden" />  
+    </div>
+    <div class="form-group">
         <label for="txtFornecedor">Nome Fornecedor</label>
         <asp:TextBox ID="txtFornecedor" class="form-control" placeholder="Informe o nome do Fornecedor" runat="server"></asp:TextBox>
     </div>

@@ -13,16 +13,42 @@ namespace Bhopal2.scripts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                var param = Request.QueryString["Id"];
+                if (param != null)
+                {
+                    long id;
+                    var i = long.TryParse(param, out id);
+                    if (i)
+                    {
+                        AtualizaFormulario(id);
+                    }
+                }
+            }
+        }
 
+        void AtualizaFormulario(long Id)
+        {
+            var i = new MarcaDAO().ObterPeloId(Id);
+
+            txtId.Text = i.Id.ToString();
+            txtMarca.Text = i.Nome;
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             Marca m = new Marca();
-            m.Nome = txtMarca.Text.ToString();
+            var dao = new MarcaDAO();
 
-            MarcaDAO gravarMarca = new MarcaDAO();
-            gravarMarca.AdicionaMarca(m);
+            //salvando os dados do cadastro de impressora
+            if (txtId.Text != string.Empty)
+            {
+                m = dao.ObterPeloId(long.Parse(txtId.Text));
+            }
+
+            m.Nome = txtMarca.Text.ToString();
+            dao.AdicionaMarca(m);
 
             Response.Redirect("marcas.aspx");
         }

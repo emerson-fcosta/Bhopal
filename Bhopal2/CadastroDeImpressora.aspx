@@ -11,7 +11,6 @@
         <label for="txtId" hidden></label>
         <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server"  type="hidden" />  
     </div>
-
     <div class="form-group">
         <label for="txtTipo">Tipo</label>
         <asp:TextBox ID="txtTipo" class="form-control" placeholder="Digite tipo de impressora" runat="server" OnTextChanged="txtModeloNome_TextChanged"></asp:TextBox>
