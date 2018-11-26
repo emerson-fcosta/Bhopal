@@ -41,7 +41,7 @@ namespace Bhopal2.DAO
 
         public IList<Marca> GetAll()
         {
-            IQuery buscaMarcas = Session.CreateQuery($"from Marca m");
+            IQuery buscaMarcas = Session.CreateQuery($"from Marca");
             var list = (List<Marca>)buscaMarcas.List<Marca>();
             return list;
         }
