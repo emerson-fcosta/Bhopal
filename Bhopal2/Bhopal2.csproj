@@ -254,14 +254,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\DepartamentoBusiness.cs" />
-    <Compile Include="Business\FilialBusiness.cs" />
-    <Compile Include="Business\FornecedorBusiness.cs" />
-    <Compile Include="Business\ImpressoraBusiness.cs" />
-    <Compile Include="Business\MarcaBusiness.cs" />
-    <Compile Include="Business\ModeloBusiness.cs" />
-    <Compile Include="Business\PedidoDeTonerBusiness.cs" />
-    <Compile Include="Business\TonerBusiness.cs" />
     <Compile Include="CadastroDeDepartamento.aspx.cs">
       <DependentUpon>CadastroDeDepartamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -366,7 +358,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infra\NHibernateHelper.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,7 +395,7 @@
     <Compile Include="Models\TipoImpressoraEnum.cs" />
     <Compile Include="Models\Toner.cs" />
     <Compile Include="Models\Usuario.cs" />
-    <Compile Include="NHibernateSessionManager.cs" />
+    <Compile Include="Infra\NHibernateSessionManager.cs" />
     <Compile Include="PedidoDeToner.aspx.cs">
       <DependentUpon>PedidoDeToner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

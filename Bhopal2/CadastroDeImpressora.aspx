@@ -9,7 +9,7 @@
 
     <div class="form-group">
         <label for="txtId" hidden></label>
-        <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server"  type="hidden" />  
+        <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server" type="hidden" />
     </div>
     <div class="form-group">
         <label for="txtTipo">Tipo</label>
@@ -24,13 +24,11 @@
         <asp:DropDownList ID="ddlFornecedor" class="form-control" runat="server" OnSelectedIndexChanged="ddlFornecedor_SelectedIndexChanged" ToolTip="Selecione o fornecedor">
         </asp:DropDownList>
     </div>
-
     <div class="row">
         <div class="col-xs-6">
             <label for="ddlMarca">Marca</label>
             <asp:DropDownList ID="ddlMarca" class="form-control" runat="server" OnSelectedIndexChanged="ddlMarca_SelectedIndexChanged" ToolTip="Selecione a marca" AutoPostBack="True">
             </asp:DropDownList>
-
         </div>
         <div class="col-xs-6">
             <label for="ddlModelo">Modelo</label>
@@ -43,6 +41,7 @@
 
     <div class="form-group">
     </div>
+
     <div class="form-group">
     </div>
     <%--    <div class="form-group">

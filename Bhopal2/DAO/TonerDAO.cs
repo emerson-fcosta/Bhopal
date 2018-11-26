@@ -17,28 +17,40 @@ namespace Bhopal2.DAO
             Session.Save(toner);
         }
 
-        public void RemoveToner(Toner toner)
+        public void Deletar(Toner toner)
         {
             Session.Delete(toner);
         }
-        
+
+        public void Deletar(long id)
+        {
+            Deletar(ObterPeloId(id));
+        }
+
         public void AtualizaToner(Toner toner)
         {
             Session.Update(toner);
         }
 
-        public IList<Toner> GetAll()
+        public IList<Toner> ObterTodos()
         {
-            IQuery buscaToneres = Session.CreateQuery($"from Toner t");
+            IQuery buscaToneres = Session.CreateQuery($"from Toner");
             var list = (List<Toner>)buscaToneres.List<Toner>();
             return list;
         }
 
-        public IList<Toner> getByImpressora(Impressora I)
+        public IList<Toner> ObterPeloIdImpressora(Impressora I)
         {
-            IQuery buscaToner = Session.CreateQuery($"from Toner t where t.Id = {I.Id}");
+            IQuery buscaToner = Session.CreateQuery($"from Toner t where t.Impressora.Id = {I.Id}");
             var list = buscaToner.List<Toner>().ToList();
             return list;
+        }
+
+        internal Toner ObterPeloId(long id)
+        {
+            return Session.Query<Toner>()
+                .Where(x => x.Id == id)
+                .FirstOrDefault();
         }
     }
 }

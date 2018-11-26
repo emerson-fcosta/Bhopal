@@ -49,7 +49,7 @@ namespace Bhopal2
 
                 //Toner
                 var t = new TonerDAO();
-                var toneres = t.GetAll();
+                var toneres = t.ObterTodos();
                 if (toneres.Count > 0)
                 {
                     ddlToner.DataValueField = "Id";

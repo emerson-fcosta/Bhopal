@@ -11,24 +11,24 @@
         <asp:TextBox ID="txtId" class="form-control" placeholder="Identificador do registro" runat="server"  type="hidden" />  
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Cor</label>
-        <asp:TextBox ID="TextBox1" type="text" runat="server" class="form-control" placeholder="Digite a cor" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+        <label for="txtCor">Cor</label>
+        <asp:TextBox ID="txtCor" type="text" runat="server" class="form-control" placeholder="Digite a cor"></asp:TextBox>
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Codigo</label>
-        <asp:TextBox ID="TextBox2" type="text" class="form-control" placeholder="Digite o codigo" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+        <label for="txtCodigo">Codigo</label>
+        <asp:TextBox ID="txtCodigo" type="text" class="form-control" placeholder="Digite o codigo" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">
-        <label for="exempleInputEmail1">Impressora</label>
+        <label for="ddlImpressora">Impressora</label>
         <asp:DropDownList ID="ddlImpressora" class="form-control" AutoPostBack="true" runat="server" ToolTip="Selecione a impressora correspondente ao toner a ser cadastrado">
         </asp:DropDownList>
     </div>
     <div class="form-group">
-        <asp:CheckBox ID="CheckBox1" runat="server" Text=" Colorido ?" />
+        <asp:CheckBox ID="cbColorida" runat="server" Text=" Colorido ?" />
     </div>
     <div class="form-group">
         <a href="toners.aspx" class="btn btn-default" role="button">Voltar</a>
-        <asp:Button ID="Button1" runat="server" class="btn btn-primary" OnClick="Button1_Click" Text="Salvar" />
+        <asp:Button ID="btnSalvar" runat="server" class="btn btn-primary" OnClick="Button1_Click" Text="Salvar" />
     </div>
 
 

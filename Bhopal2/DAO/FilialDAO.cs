@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Bhopal2.Models;
-using Bhopal2.Infra;
 using NHibernate;
 
 namespace Bhopal2.DAO

@@ -1,5 +1,4 @@
-﻿using Bhopal2.Business;
-using Bhopal2.DAO;
+﻿using Bhopal2.DAO;
 using Bhopal2.Models;
 using System;
 using System.Collections.Generic;
@@ -40,7 +39,7 @@ namespace Bhopal2
             dep.Nome = txtNomeDept.Text.ToString();
 
             if (ddlFilial.SelectedValue != "")
-                dep.Filial = new FilialBusiness().retornaId(long.Parse(ddlFilial.SelectedValue));
+                dep.Filial = new FilialDAO().GetById(ddlFilial.SelectedValue);
 
             DepartamentoDAO gravardep = new DepartamentoDAO();
             gravardep.AdicionaDepartamento(dep);

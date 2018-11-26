@@ -1,5 +1,4 @@
-﻿using Bhopal2.Business;
-using Bhopal2.DAO;
+﻿using Bhopal2.DAO;
 using Bhopal2.Models;
 using System;
 using System.Collections.Generic;
@@ -16,57 +15,79 @@ namespace Bhopal2
         {
             if (!Page.IsPostBack)
             {
-                //Carregando dados no DropDownList
-                //Impressora
-                var i = new ImpressoraDAO();
-                var impressoras = i.GetAll();
-                if (impressoras.Count > 0)
-                {
-                    ddlImpressora.DataValueField = "Id";
-                    ddlImpressora.DataTextField = "Codigo";
-                    ddlImpressora.DataSource = impressoras;
-                    ddlImpressora.DataBind();
-                    ddlImpressora.Items.Insert(0, "Selecione");
-                }
+                CarregarDropDown();
 
+                var param = Request.QueryString["Id"];
+                if (param != null)
+                {
+                    long id;
+                    var i = long.TryParse(param, out id);
+                    if (i)
+                    {
+                        AtualizaFormulario(id);
+                    }
+                }
             }
 
         }
 
-        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        private void CarregarDropDown()
         {
+            //Carregando dados no DropDownList
+            //Impressora
+            var i = new ImpressoraDAO();
+            var impressoras = i.ObterTodos();
+            if (impressoras.Count > 0)
+            {
+                ddlImpressora.DataValueField = "Id";
+                ddlImpressora.DataTextField = "Codigo";
+                ddlImpressora.DataSource = impressoras;
+                ddlImpressora.DataBind();
+                ddlImpressora.Items.Insert(0, "Selecione");
+            }
 
+        }
+
+        void AtualizaFormulario(long Id)
+        {
+            var i = new TonerDAO().ObterPeloId(Id);
+
+            txtId.Text = i.Id.ToString();
+            txtCor.Text = i.Cor;
+            txtCodigo.Text = i.Codigo;
+            cbColorida.Checked = i.Colorido;
+
+            if (i.Impressora != null)
+            {
+                ddlImpressora.SelectedValue = i.Impressora.Id.ToString();
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             Toner t = new Toner();
-            t.Cor = TextBox1.Text.ToString();
-            t.Codigo = TextBox2.Text.ToString();
-            t.Colorido = CheckBox1.Checked;
+            var dao = new TonerDAO();
+
+            //salvando os dados do cadastro de impressora
+            if (txtId.Text != string.Empty)
+            {
+                t = dao.ObterPeloId(long.Parse(txtId.Text));
+            }
+
+            t.Cor = txtCor.Text;
+            t.Codigo = txtCodigo.Text;
+            t.Colorido = cbColorida.Checked;
 
             if (ddlImpressora.SelectedValue != "")
-                t.Impressora = new ImpressoraBusiness().GetByID(long.Parse(ddlImpressora.SelectedValue));
-            
-            var gravaToner = new TonerDAO();
-            gravaToner.AdicionaToner(t);
+            {
+                t.Impressora = new ImpressoraDAO().ObterPeloId(ddlImpressora.SelectedValue);
+            }
+
+            dao.AdicionaToner(t);
 
             Response.Redirect("toners.aspx");
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

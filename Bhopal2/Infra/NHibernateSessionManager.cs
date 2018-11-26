@@ -3,7 +3,7 @@ using NHibernate.Cfg;
 using System.Runtime.Remoting.Messaging;
 using System.Web;
 
-namespace Bhopal2
+namespace Bhopal2.Infra
 {
     internal class NHibernateSessionManager
     {

@@ -25,7 +25,8 @@ namespace Bhopal2
         }
         private void BindGridView()
         {
-            lista = new ImpressoraDAO().GetAll();
+            lista = new ImpressoraDAO().ObterTodos();
+
             GridViewImpressora.DataSource = lista;
             GridViewImpressora.DataBind();
         }

@@ -1,5 +1,4 @@
-﻿using Bhopal2.Business;
-using Bhopal2.DAO;
+﻿using Bhopal2.DAO;
 using Bhopal2.Models;
 using System;
 using System.Collections.Generic;
@@ -84,7 +83,7 @@ namespace Bhopal2
             mod.Nome = txtModeloNome.Text.ToString();
 
             if (ddlMarca.SelectedValue != "")
-                mod.Marca = new MarcaBusiness().retornaId(long.Parse(ddlMarca.SelectedValue));
+                mod.Marca = new MarcaDAO().ObterPeloId(long.Parse(ddlMarca.SelectedValue));
 
             dao.AdicionaModelo(mod);
 

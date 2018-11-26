@@ -1,4 +1,5 @@
-﻿using NHibernate;
+﻿using Bhopal2.Infra;
+using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;

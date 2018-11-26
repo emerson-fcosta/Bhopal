@@ -4,8 +4,7 @@
     <title>Toners</title>
 
     <link href="Content/Datatables/jquery.dataTables.min.css" rel="stylesheet" />
-
-
+    
     <script src="scripts/jquery.dataTables.min.js"></script>
     <script src="scripts/dataTables.bootstrap.min.js"></script>
 
@@ -21,6 +20,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBody" runat="server">
+
     <h3>Toner</h3>
 
     <div class="form-group">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="form-group">
-        <asp:GridView ID="GridViewToners" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None">
+        <asp:GridView ID="GridViewToners" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None" OnRowCommand="GridView_RowCommand">
             <Columns>
                 <asp:CommandField HeaderText="Comandos" ShowDeleteButton="True" ShowEditButton="True" />
             </Columns>
@@ -39,6 +39,7 @@
 
     <div class="form-group">
     </div>
+
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderScripts" runat="server">

@@ -1,5 +1,4 @@
-﻿using Bhopal2.Business;
-using Bhopal2.DAO;
+﻿using Bhopal2.DAO;
 using Bhopal2.Models;
 using System;
 using System.Collections.Generic;
@@ -103,7 +102,7 @@ namespace Bhopal2
 
         void AtualizaFormulario(long Id)
         {
-            var i = new ImpressoraDAO().getById(Id.ToString());
+            var i = new ImpressoraDAO().ObterPeloId(Id.ToString());
 
             txtId.Text = i.Id.ToString();
             txtTipo.Text = i.Tipo;
@@ -146,18 +145,18 @@ namespace Bhopal2
             //salvando os dados do cadastro de impressora
             if (txtId.Text != string.Empty)
             {
-                imp = dao.getById(txtId.Text);
+                imp = dao.ObterPeloId(txtId.Text);
             }
 
             imp.Tipo = txtTipo.Text.ToString();
             imp.Codigo = txtCodigoImpressora.Text.ToString();
 
             if (ddlFornecedor.SelectedValue != "")
-                imp.Fornecedor = new FornecedorBusiness().retornaId(long.Parse(ddlFornecedor.SelectedValue));
+                imp.Fornecedor = new FornecedorDAO().ObterPeloId(long.Parse(ddlFornecedor.SelectedValue));
 
             if (ddlModelo.SelectedIndex > 0)
             {
-                imp.Modelo = new ModeloBusiness().retornaId(long.Parse(ddlModelo.SelectedValue));
+                imp.Modelo = new ModeloDAO().ObterPeloId(long.Parse(ddlModelo.SelectedValue));
                 //imp.Marca = imp.Modelo.Marca;
             }
 
@@ -171,12 +170,12 @@ namespace Bhopal2
 
             if (ddlFilial.SelectedIndex > 0)
             {
-                imp.Filial = new FilialBusiness().retornaId(long.Parse(ddlFilial.SelectedValue));
+                imp.Filial = new FilialDAO().GetById(ddlFilial.SelectedValue);
             }
 
             if (ddlDepartamento.SelectedIndex > 0)
             {
-                imp.Departamento = new DepartamentoBusiness().retornaId(long.Parse(ddlDepartamento.SelectedValue));
+                imp.Departamento = new DepartamentoDAO().getById(ddlDepartamento.SelectedValue);
             }
 
             dao.AdicionaImpressora(imp);

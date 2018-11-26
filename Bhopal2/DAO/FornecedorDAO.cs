@@ -32,5 +32,10 @@ namespace Bhopal2.DAO
             List<Fornecedor> list = Session.Query<Fornecedor>().ToList();
             return list;
         }
+
+        internal Fornecedor ObterPeloId(long v)
+        {
+            return Session.Get<Fornecedor>(v);
+        }
     }
 }

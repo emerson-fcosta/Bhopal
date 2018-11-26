@@ -17,7 +17,7 @@ namespace Bhopal2.DAO
             Session.Save(impressora);
         }
 
-        internal IList<Impressora> GetAll()
+        internal IList<Impressora> ObterTodos()
         {
             IQuery buscaImpressora = Session.CreateQuery($"from Impressora i");
             var list = buscaImpressora.List<Impressora>().ToList();
@@ -31,7 +31,7 @@ namespace Bhopal2.DAO
 
         public void Deletar(long id)
         {
-            Deletar(getById(id.ToString()));
+            Deletar(ObterPeloId(id.ToString()));
         }
 
         public void AtualizaImpressora(Impressora impressora)
@@ -39,15 +39,25 @@ namespace Bhopal2.DAO
             Session.Update(impressora);
         }
 
-        internal Impressora getById(string id)
+        internal Impressora ObterPeloId(string id)
         {
-            IQuery buscaImpressora = Session.CreateQuery($"from Impressora i where i.Id = {id}");
-            var list = buscaImpressora.List<Impressora>().FirstOrDefault();
-            return list;
+            long i;
+
+            var result = long.TryParse(id, out i);
+
+            if (result)
+            {
+                IQuery buscaImpressora = Session.CreateQuery($"from Impressora i where i.Id = {id}");
+                return buscaImpressora.List<Impressora>().FirstOrDefault();
+            }
+            else
+            {
+                return null;
+            }
 
         }
 
-        public IList<Impressora> getByDepartamento(Departamento d)
+        public IList<Impressora> ObterPeloDepartamento(Departamento d)
         {
             IQuery buscaImpressora = Session.CreateQuery($"from Impressora i where i.Id = {d.Id}");
             var list = buscaImpressora.List<Impressora>().ToList();
