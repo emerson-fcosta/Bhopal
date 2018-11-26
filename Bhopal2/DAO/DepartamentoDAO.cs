@@ -30,7 +30,7 @@ namespace Bhopal2.DAO
 
         public IList<Departamento> GetAll()
         {            
-            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento d");
+            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento");
             var list = (List<Departamento>)buscaDepartamento.List<Departamento>();
             return list;
         }
