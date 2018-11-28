@@ -30,14 +30,14 @@ namespace Bhopal2.DAO
 
         public IList<Departamento> GetAll()
         {            
-            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento");
+            IQuery buscaDepartamento = Session.CreateQuery($"select d from Departamento d");
             var list = (List<Departamento>)buscaDepartamento.List<Departamento>();
             return list;
         }
 
         public IList<Departamento> getByFilial(Filial f)
         {
-            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento d where d.Filial = {f.Id}");
+            IQuery buscaDepartamento = Session.CreateQuery($"select d from Departamento d where d.Filial = {f.Id}");
             var list = buscaDepartamento.List<Departamento>().ToList();
             return list;
 
@@ -45,7 +45,7 @@ namespace Bhopal2.DAO
 
         internal Departamento getById(string id)
         {
-            IQuery buscaDepartamento = Session.CreateQuery($"from Departamento d where d.Id = {id}");
+            IQuery buscaDepartamento = Session.CreateQuery($"select d from Departamento d where d.Id = {id}");
             var list = buscaDepartamento.List<Departamento>().FirstOrDefault();
             return list;
         }

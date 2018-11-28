@@ -19,7 +19,7 @@
         <asp:TextBox ID="txtContato" class="form-control" placeholder="Informe o nome do contato" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Telefone</label>
+        <label for="txtTelefone">Telefone</label>
         <asp:TextBox ID="txtTelefone" class="form-control" placeholder="Informe o telefone do fornecedor" runat="server"></asp:TextBox>
     </div>
     <div class="form-group">

@@ -19,7 +19,7 @@ namespace Bhopal2.DAO
 
         internal IList<Impressora> ObterTodos()
         {
-            IQuery buscaImpressora = Session.CreateQuery($"from Impressora i");
+            IQuery buscaImpressora = Session.CreateQuery($"select i from Impressora i");
             var list = buscaImpressora.List<Impressora>().ToList();
             return list;
         }

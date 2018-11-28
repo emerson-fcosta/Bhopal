@@ -12,22 +12,27 @@ namespace Bhopal2.DAO
     public class FornecedorDAO : GenericDAO
     {
 
-        public void AdicionaFornecedor(Fornecedor fornecedor)
+        public void Adicionar(Fornecedor fornecedor)
         {
             Session.Save(fornecedor);
         }
         
-        public void RemoveFornecedor(Fornecedor fornecedor)
+        public void Deletar(Fornecedor fornecedor)
         {
             Session.Delete(fornecedor);
         }
 
-        public void AtualizaFornecedor(Fornecedor fornecedor)
+        public void Deletar(long id)
+        {
+            Deletar(ObterPeloId(id));
+        }
+
+        public void Atualizar(Fornecedor fornecedor)
         {
             Session.Update(fornecedor);
         }
 
-        public IList<Fornecedor> GetAll()
+        public IList<Fornecedor> ObterTodos()
         {
             List<Fornecedor> list = Session.Query<Fornecedor>().ToList();
             return list;
