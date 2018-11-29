@@ -20,7 +20,7 @@
     </div>
     <div class="form-group">
         <a href="departamentos.aspx" class="btn btn-default" role="button">Voltar</a>
-        <asp:Button ID="Button1" runat="server" Text="Salvar" class="btn btn-primary" OnClick="Button1_Click" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-primary" OnClick="Salvar_Click" />
     </div>
 </asp:Content>
 

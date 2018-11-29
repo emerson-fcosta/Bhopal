@@ -4,8 +4,7 @@
     <title>Departamentos</title>
 
     <link href="Content/Datatables/jquery.dataTables.min.css" rel="stylesheet" />
-
-
+    
     <script src="scripts/jquery.dataTables.min.js"></script>
     <script src="scripts/dataTables.bootstrap.min.js"></script>
 
@@ -29,7 +28,7 @@
     </div>
 
     <div class="form-group">
-        <asp:GridView ID="GridViewDepartamentos" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None">
+        <asp:GridView ID="GridViewDepartamentos" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None" OnRowCommand="GridView_RowCommand">
             <Columns>
                 <asp:CommandField HeaderText="Comandos" ShowDeleteButton="True" ShowEditButton="True" />
             </Columns>

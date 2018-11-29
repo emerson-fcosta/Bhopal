@@ -7,35 +7,46 @@ using NHibernate;
 
 namespace Bhopal2.DAO
 {
+    /// <summary>
+    /// Centraliza o acesso a dados do Tipo <see cref="Filial"/>
+    /// </summary>
     public class FilialDAO : GenericDAO
     {
-        internal void AdicionaFilial(Filial filial)
+        internal void Salvar(Filial filial)
         {
             Session.Save(filial);
         }
 
-        internal void RemoveFilial(Filial filial)
+        internal void Deletar(Filial filial)
         {
             Session.Delete(filial);
         }
 
-        internal void AtualizaFilial(Filial filial)
+        internal void Deletar(long id)
+        {
+            Deletar(ObterPeloId(id));
+        }
+
+        internal void Atualizar(Filial filial)
         {
             Session.Update(filial);
         }
 
-        internal IList<Filial> GetAll()
+        internal IList<Filial> ObterTodos()
         {
             return Session.Query<Filial>().ToList();
-            //var list = (List<Filial>)buscaFilial.List<Filial>();
-            //return list;
         }
 
-        internal Filial GetById(string id)
+        internal Filial ObterPeloId(string id)
         {
             IQuery buscaFilial = Session.CreateQuery($"from Filial f where f.Id = {id}");
             var list = buscaFilial.List<Filial>().FirstOrDefault();
             return list;
+        }
+
+        internal Filial ObterPeloId(long id)
+        {
+            return Session.Get<Filial>(id);
         }
     }
 }

@@ -29,7 +29,7 @@
     </div>
 
     <div class="form-group">
-        <asp:GridView ID="GridViewFiliais" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None">
+        <asp:GridView ID="GridViewFiliais" runat="server" CssClass="table table-striped" GridLines="None" BorderStyle="None" OnRowCommand="GridView_RowCommand">
             <Columns>
                 <asp:CommandField HeaderText="Comandos" ShowDeleteButton="True" ShowEditButton="True" />
             </Columns>

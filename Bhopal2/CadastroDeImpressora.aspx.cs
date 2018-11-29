@@ -57,7 +57,7 @@ namespace Bhopal2
             //}
             //Filial
             var filial = new FilialDAO();
-            var filiais = filial.GetAll();
+            var filiais = filial.ObterTodos();
             if (filiais.Count > 0)
             {
                 ddlFilial.DataValueField = "Id";
@@ -137,7 +137,7 @@ namespace Bhopal2
         }
 
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Salvar_Click(object sender, EventArgs e)
         {
             Impressora imp = new Impressora();
             var dao = new ImpressoraDAO();
@@ -170,12 +170,12 @@ namespace Bhopal2
 
             if (ddlFilial.SelectedIndex > 0)
             {
-                imp.Filial = new FilialDAO().GetById(ddlFilial.SelectedValue);
+                imp.Filial = new FilialDAO().ObterPeloId(ddlFilial.SelectedValue);
             }
 
             if (ddlDepartamento.SelectedIndex > 0)
             {
-                imp.Departamento = new DepartamentoDAO().getById(ddlDepartamento.SelectedValue);
+                imp.Departamento = new DepartamentoDAO().ObterPeloId(ddlDepartamento.SelectedValue);
             }
 
             dao.AdicionaImpressora(imp);
@@ -225,7 +225,7 @@ namespace Bhopal2
         {
             //Departamento
             var d = new DepartamentoDAO();
-            var departamentos = d.getByFilial(new FilialDAO().GetById(ddlFilial.SelectedValue));
+            var departamentos = d.ObterPeloId(new FilialDAO().ObterPeloId(ddlFilial.SelectedValue));
             if (departamentos.Count > 0)
             {
                 ddlDepartamento.DataValueField = "Id";

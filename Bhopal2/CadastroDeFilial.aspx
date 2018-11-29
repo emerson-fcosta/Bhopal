@@ -25,7 +25,7 @@
     </div>
     <div class="form-group">
         <a href="filiais.aspx" class="btn btn-default" role="button">Voltar</a>
-        <asp:Button runat="server" Text="Salvar" class="btn btn-primary" OnClick="Unnamed1_Click" />
+        <asp:Button runat="server" Text="Salvar" class="btn btn-primary" OnClick="Salvar_Click" />
     </div>
 </asp:Content>
 
