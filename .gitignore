@@ -246,3 +246,4 @@ ModelManifest.xml
 .fake/
 /Bhopal2/App_Data/nhibernate.db
 /Bhopal2/App_Data/_Bhopal2.db
+/Bhopal2/bower_components

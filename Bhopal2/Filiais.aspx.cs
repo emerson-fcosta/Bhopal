@@ -20,7 +20,7 @@ namespace Bhopal2
                 BindGridView();
             }
 
-            if (lista != null)
+            if (lista != null && lista.Count > 0)
                 GridViewFiliais.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
 
