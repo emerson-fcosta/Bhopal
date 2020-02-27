@@ -1,2 +1,2 @@
 # Bhopal
-Controle de pedidos de reposição de toner, sistema utilizado para fins academicos.
+Controle de pedidos de reposição de toner. Sistema utilizado para fins academicos.
